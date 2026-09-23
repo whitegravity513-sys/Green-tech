@@ -87,14 +87,14 @@ export default function ProductDetails() {
             {/* Left – Images */}
             <div>
               {/* Main Image */}
-              <div className="rounded-2xl overflow-hidden shadow-card border border-gray-100 mb-4">
+              <div className="rounded-2xl overflow-hidden shadow-card border border-slate-200 mb-4 bg-slate-50 flex items-center justify-center">
                 <ProductImage
                   src={gallery[activeImage]}
                   alt={`${product.name} - image ${activeImage + 1}`}
                   category={product.category}
                   name={product.name}
-                  className="h-[380px] md:h-[440px]"
-                  imgClassName="object-cover"
+                  className="h-[380px] md:h-[440px] w-full"
+                  imgClassName="object-contain p-4"
                 />
               </div>
               {/* Thumbnails */}
@@ -104,7 +104,7 @@ export default function ProductDetails() {
                     <button
                       key={idx}
                       onClick={() => setActiveImage(idx)}
-                      className={`w-20 h-20 rounded-xl overflow-hidden border-2 transition-all ${activeImage === idx ? "border-primary shadow-green" : "border-gray-200 hover:border-primary/50"}`}
+                      className={`w-20 h-20 rounded-xl overflow-hidden border-2 bg-slate-50 p-1 transition-all ${activeImage === idx ? "border-primary shadow-green" : "border-gray-200 hover:border-primary/50"}`}
                       aria-label={`View image ${idx + 1}`}
                     >
                       <ProductImage
@@ -113,7 +113,7 @@ export default function ProductDetails() {
                         category={product.category}
                         name=""
                         className="w-full h-full"
-                        imgClassName="object-cover"
+                        imgClassName="object-contain"
                       />
                     </button>
                   ))}

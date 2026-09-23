@@ -55,7 +55,7 @@ export default function Home() {
       model: "GTS 1.1 kW – 4.5 kW Series",
       desc: "Upward ceiling duct distribution designed for factory floor cooling without floor space loss.",
       specs: ["Airflow: Up to 25,000 CFM", "3 Phase 380/415V Heavy Axial Fan"],
-      image: "/images/coolers/real-top-discharge.jpg",
+      image: "/images/coolers/top-discharge-cooler.jpg",
       link: "/products/top-discharge-air-cooler",
     },
     {
@@ -67,7 +67,7 @@ export default function Home() {
       model: "GTS 0.75 kW – 3.0 kW Series",
       desc: "Downward air delivery engineered for worker-zone cooling in injection moulding and assembly lines.",
       specs: ["Airflow: 8,000 – 18,000 CFM", "Coverage: 800–2,500 Sq Ft"],
-      image: "/images/coolers/real-down-discharge.jpg",
+      image: "/images/coolers/down-discharge-cooler.jpg",
       link: "/products/down-discharge-air-cooler",
     },
     {
@@ -79,7 +79,7 @@ export default function Home() {
       model: "GTS SS-304 Extreme Series",
       desc: "Grade 304 stainless steel body with corner reinforcement built for harsh chemical & high-heat plants.",
       specs: ["Body: SS 304 Stainless Sheet", "Pure Copper Winding Motor"],
-      image: "/images/coolers/real-stainless-steel.jpg",
+      image: "/images/coolers/stainless-steel-cooler.jpg",
       link: "/products/ss-heavy-duty-air-cooler",
     },
     {
@@ -153,18 +153,19 @@ export default function Home() {
   const brochureClients = [
     { name: "Mangla Textiles", sector: "Textile Mill", badge: "Textiles" },
     { name: "Roto Pumps Ltd", sector: "Fluid Engineering", badge: "Pumps (Since 1968)" },
-    { name: "Sony Enterprises", sector: "Heavy Engineering", badge: "Engineering" },
+    { name: "FairDeal", sector: "Consumer Products", badge: "Consumer" },
     { name: "Tulsi Creation", sector: "Apparel Exports", badge: "Garments" },
-    { name: "FairDeal", sector: "Consumer Manufacturing", badge: "Consumer" },
     { name: "Maple Industries", sector: "Eco Manufacturing", badge: "Eco Products" },
-    { name: "R-Exim India", sector: "Export & Trade", badge: "Global Trade" },
-    { name: "CTA Associates", sector: "Commission & Tech", badge: "Technology" },
-    { name: "GK Fashions Pvt Ltd", sector: "Garment Manufacturing", badge: "Apparel" },
-    { name: "Cotton Concepts", sector: "Organic Fabric", badge: "Cotton" },
-    { name: "Shankar Fenestrations", sector: "Glass & Fenestrations", badge: "Glass Architecture" },
+    { name: "CTA Associates", sector: "Industrial & Tech", badge: "Technology" },
+    { name: "Shankar Glass (SFG)", sector: "Glass & Infrastructure", badge: "Glass Architecture" },
     { name: "SG Global Exports", sector: "International Supply", badge: "Exports" },
+    { name: "Kumar Labels", sector: "Packaging & Labels", badge: "Eco Packaging" },
     { name: "Krishna Beads (KBI)", sector: "Industries LLP", badge: "Manufacturing" },
-    { name: "Sparklerr", sector: "Industrial Lighting", badge: "Lighting" },
+    { name: "Sony Enterprises", sector: "Heavy Engineering", badge: "Engineering" },
+    { name: "GK Fashions Pvt Ltd", sector: "Garment Manufacturing", badge: "Apparel" },
+    { name: "Manish", sector: "Textile Exports", badge: "Textile" },
+    { name: "Sparkler", sector: "Industrial Lighting", badge: "Lighting" },
+    { name: "Cotton Concepts", sector: "Organic Fabric", badge: "Cotton" },
   ];
 
   return (
@@ -206,7 +207,7 @@ export default function Home() {
                   Up to 80% Power Saving
                 </span>
                 <img
-                  src="/images/coolers/real-top-discharge.jpg"
+                  src="/images/coolers/top-discharge-cooler.jpg"
                   alt="Industrial Air Coolers"
                   className="w-full h-full object-contain group-hover:scale-108 transition-transform duration-500"
                 />

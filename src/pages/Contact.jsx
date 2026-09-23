@@ -32,9 +32,12 @@ export default function Contact() {
       );
   }, []);
 
+  const headOfficeAddress =
+    "Office No-7, Yadu Market, FNG Service Road, Near Parthla, Sector-121, Noida (Uttar Pradesh) - 201307";
+
   const googleMapSrc = `https://maps.google.com/maps?q=${encodeURIComponent(
-    "Office No-7, Yadu Market, FNG Service Road Near Parthla, Sector-121, Noida, Uttar Pradesh"
-  )}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
+    "Office No-7, Yadu Market, FNG Service Road, Near Parthla, Sector-121, Noida, Uttar Pradesh 201307"
+  )}&t=&z=16&ie=UTF8&iwloc=B&output=embed`;
 
   const waMsg = encodeURIComponent(
     `Hello GreenTech Solutions! I would like to get a quote and catalogue for industrial air coolers and exhaust fans.`
@@ -213,17 +216,17 @@ export default function Contact() {
                     </div>
                     <div>
                       <span className="text-xs font-bold uppercase tracking-wider text-[#009B4D] block">
-                        Official Factory & Office Location
+                        Head Office Location
                       </span>
                       <p className="text-xs sm:text-sm font-extrabold text-[#142D4E] mt-0.5 leading-snug">
-                        Office No-7, Yadu Market, FNG Service Road Near Parthla, Sector-121, Noida (U.P.)
+                        {headOfficeAddress}
                       </p>
                     </div>
                   </div>
 
                   <a
                     href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                      "Office No-7, Yadu Market, FNG Service Road Near Parthla, Sector-121, Noida, Uttar Pradesh 201301"
+                      headOfficeAddress
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -235,7 +238,7 @@ export default function Contact() {
                   </a>
                 </div>
 
-                <div className="relative w-full h-[340px] sm:h-[380px] bg-slate-100">
+                <div className="relative w-full h-[360px] sm:h-[400px] bg-slate-100">
                   <iframe
                     title="GreenTech Solutions Office Map Sector 121 Noida"
                     src={googleMapSrc}
@@ -248,19 +251,37 @@ export default function Contact() {
                     className="w-full h-full"
                   />
 
-                  {/* Floating Location Marker Badge on Map */}
-                  <div className="absolute top-4 left-4 z-10 bg-white/95 backdrop-blur-md px-3.5 py-2.5 rounded-xl shadow-lg border border-slate-200 flex items-center gap-2.5 max-w-[290px] sm:max-w-xs pointer-events-none">
-                    <span className="relative flex h-3 w-3 shrink-0">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-3 w-3 bg-[#009B4D]"></span>
-                    </span>
+                  {/* ── LOCATION SIGN BADGE OVERLAY ON MAP ── */}
+                  <div className="absolute top-4 left-4 z-10 bg-white/95 backdrop-blur-md p-3 rounded-2xl shadow-xl border border-emerald-200/80 flex items-start gap-3 max-w-[320px] sm:max-w-sm pointer-events-auto">
+                    <div className="relative flex items-center justify-center mt-1">
+                      <span className="animate-ping absolute inline-flex h-8 w-8 rounded-full bg-red-400 opacity-60"></span>
+                      <div className="relative flex items-center justify-center w-7 h-7 rounded-full bg-red-600 text-white shadow-md">
+                        <MapPin size={16} fill="white" />
+                      </div>
+                    </div>
                     <div>
-                      <p className="text-xs font-black text-[#142D4E] leading-tight">
-                        GreenTech Solutions
+                      <div className="flex items-center gap-1.5">
+                        <p className="text-xs font-black text-[#142D4E] leading-tight">
+                          GreenTech Solutions
+                        </p>
+                        <span className="text-[9px] font-extrabold uppercase px-1.5 py-0.2 rounded bg-emerald-100 text-emerald-800">
+                          Head Office
+                        </span>
+                      </div>
+                      <p className="text-[11px] text-slate-700 font-semibold mt-1 leading-snug">
+                        Office No-7, Yadu Market, FNG Service Road, Near Parthla, Sector-121, Noida (U.P.) - 201307
                       </p>
-                      <p className="text-[10px] text-slate-600 font-medium truncate mt-0.5">
-                        Office No-7, Yadu Market, Parthla, Sec-121 Noida
-                      </p>
+                      <a
+                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                          headOfficeAddress
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-[11px] font-bold text-[#009B4D] hover:underline mt-1.5"
+                      >
+                        <span>View on Google Maps</span>
+                        <ExternalLink size={10} />
+                      </a>
                     </div>
                   </div>
                 </div>

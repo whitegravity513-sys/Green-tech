@@ -13,6 +13,11 @@ import {
   PhoneCall,
   Factory,
   Layers,
+  Phone,
+  Mail,
+  MessageCircle,
+  UserCheck,
+  Briefcase,
 } from "lucide-react";
 import SectionHeading from "../components/SectionHeading";
 import ProductImage from "../components/ProductImage";
@@ -20,22 +25,20 @@ import { companyInfo } from "../data/company";
 
 const clientLogos = [
   { name: "Mangla Textiles", logo: "/images/clients/logo-mangla.png", sector: "Textile Mill" },
-  { name: "Roto Pumps Ltd", logo: "/images/clients/logo-rotopumps.png", sector: "Pumps & Fluids" },
-  { name: "Sony Enterprises", logo: "/images/clients/logo-sonyenterprises.png", sector: "Engineering Spares" },
-  { name: "Tulsi Creation", logo: "/images/clients/logo-tulsi.png", sector: "Apparel Export" },
+  { name: "Roto Pumps Ltd", logo: "/images/clients/logo-rotopumps.png", sector: "Pumps (Since 1968)" },
   { name: "FairDeal", logo: "/images/clients/logo-fairdeal.png", sector: "Consumer Products" },
+  { name: "Tulsi Creation", logo: "/images/clients/logo-tulsi.png", sector: "Apparel Export" },
   { name: "Maple Industries", logo: "/images/clients/logo-maple.png", sector: "Eco Manufacturing" },
-  { name: "GK Fashions Pvt Ltd", logo: "/images/clients/logo-gkfashions.png", sector: "Garments" },
-  { name: "Cotton Concepts", logo: "/images/clients/logo-cottonconcepts.png", sector: "Fabrics" },
-  { name: "R-Exim India", logo: "/images/clients/logo-rexim.png", sector: "Global Trade" },
   { name: "CTA Associates", logo: "/images/clients/logo-cta.png", sector: "Industrial Tech" },
-  { name: "Fenzy Styles", logo: "/images/clients/logo-fenzystyles.png", sector: "Active Wear" },
-  { name: "Galaxy Garments", logo: "/images/clients/logo-galaxygarments.png", sector: "Apparel Mills" },
-  { name: "Shankar Fenestrations", logo: "/images/clients/logo-shankarfenestrations.png", sector: "Glass & Infra" },
+  { name: "Shankar Glass (SFG)", logo: "/images/clients/logo-shankarfenestrations.png", sector: "Glass & Infra" },
   { name: "SG Global Exports", logo: "/images/clients/logo-sgglobal.png", sector: "Supply Chain" },
+  { name: "Kumar Labels", logo: "/images/clients/logo-kumarlabels.png", sector: "Packaging & Labels" },
   { name: "Krishna Beads (KBI)", logo: "/images/clients/logo-krishnabeads.png", sector: "Industries LLP" },
-  { name: "Sparklerr", logo: "/images/clients/logo-sparklerr.png", sector: "Industrial Lighting" },
+  { name: "Sony Enterprises", logo: "/images/clients/logo-sonyenterprises.png", sector: "Engineering Spares" },
+  { name: "GK Fashions Pvt Ltd", logo: "/images/clients/logo-gkfashions.png", sector: "Garments" },
   { name: "Manish", logo: "/images/clients/logo-manish.png", sector: "Textile Exports" },
+  { name: "Sparkler", logo: "/images/clients/logo-sparklerr.png", sector: "Industrial Lighting" },
+  { name: "Cotton Concepts", logo: "/images/clients/logo-cottonconcepts.png", sector: "Fabrics" },
 ];
 
 export default function About() {
@@ -217,38 +220,76 @@ export default function About() {
               </div>
             </div>
 
-            {/* Right Column: Factory & Equipment Collage */}
+            {/* Right Column: Factory & Equipment Showcase */}
             <div className="lg:col-span-5 space-y-4">
-              <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-md">
-                <img
-                  src="/images/factory/about-factory.jpg"
-                  alt="Industrial shopfloor and manufacturing operations"
-                  className="w-full h-64 object-cover"
-                />
+              {/* Featured: Exhaust & Ventilation */}
+              <div className="group relative rounded-3xl overflow-hidden border border-slate-200/90 shadow-md bg-white hover:shadow-xl transition-all duration-300">
+                <div className="relative h-56 sm:h-64 w-full overflow-hidden bg-slate-900">
+                  <img
+                    src="/images/exhaust-fans/fibercone-rooftop.jpg"
+                    alt="Exhaust and Ventilation Factory Installation"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B1726]/85 via-transparent to-transparent" />
+                  <div className="absolute top-3 left-3">
+                    <span className="rounded-full bg-[#142D4E]/90 backdrop-blur-md text-white text-[10px] font-black uppercase tracking-wider px-3 py-1 border border-white/20">
+                      Industrial Turnkey
+                    </span>
+                  </div>
+                  <div className="absolute bottom-3 left-4 right-4 text-white">
+                    <h4 className="text-base sm:text-lg font-black text-white leading-tight">
+                      Exhaust & Ventilation
+                    </h4>
+                    <p className="text-[11px] text-slate-200 mt-0.5">
+                      Rooftop & wall-mounted high-CFM extraction fan banks for complete shopfloor air exchange
+                    </p>
+                  </div>
+                </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                <div className="rounded-xl overflow-hidden border border-slate-200 shadow-xs bg-slate-100 p-2">
-                  <img
-                    src="/images/coolers/real-top-discharge.jpg"
-                    alt="Top Discharge Air Cooler"
-                    className="w-full h-32 object-contain"
-                  />
-                  <p className="text-[11px] font-bold text-slate-800 text-center mt-2">
+              {/* 2 Symmetrical Cards: Air Cooler Fabrication & Fibercone Exhaust Fan */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                
+                {/* 1. Air Cooler Fabrication */}
+                <div className="group rounded-2xl bg-white border border-slate-200/90 p-4 shadow-sm hover:shadow-md hover:border-[#009B4D] transition-all flex flex-col">
+                  <div className="relative aspect-[4/3] rounded-xl bg-slate-50 overflow-hidden p-2 mb-3 border border-slate-100 flex items-center justify-center">
+                    <span className="absolute top-2 left-2 z-10 rounded-full bg-[#009B4D] text-white text-[9px] font-extrabold uppercase px-2 py-0.5 shadow-xs">
+                      Fabrication
+                    </span>
+                    <img
+                      src="/images/coolers/top-discharge-cooler.jpg"
+                      alt="Air Cooler Fabrication GreenTech"
+                      className="w-full h-full object-contain group-hover:scale-108 transition-transform duration-500"
+                    />
+                  </div>
+                  <h4 className="text-sm font-black text-[#142D4E] group-hover:text-[#009B4D] transition-colors leading-snug">
                     Air Cooler Fabrication
+                  </h4>
+                  <p className="text-[11px] text-slate-500 mt-1 leading-snug">
+                    0.75 kW – 4.5 kW heavy ductable & top-discharge evaporative cooling units.
                   </p>
                 </div>
 
-                <div className="rounded-xl overflow-hidden border border-slate-200 shadow-xs bg-slate-100 p-2">
-                  <img
-                    src="/images/exhaust-fans/fibercone-exhaust-fan.jpg"
-                    alt="Fibercone Exhaust Fan"
-                    className="w-full h-32 object-contain"
-                  />
-                  <p className="text-[11px] font-bold text-slate-800 text-center mt-2">
-                    Exhaust & Ventilation
+                {/* 2. Fibercone Exhaust Fan */}
+                <div className="group rounded-2xl bg-white border border-slate-200/90 p-4 shadow-sm hover:shadow-md hover:border-[#009B4D] transition-all flex flex-col">
+                  <div className="relative aspect-[4/3] rounded-xl bg-slate-50 overflow-hidden p-2 mb-3 border border-slate-100 flex items-center justify-center">
+                    <span className="absolute top-2 left-2 z-10 rounded-full bg-[#142D4E] text-white text-[9px] font-extrabold uppercase px-2 py-0.5 shadow-xs">
+                      Fibercone
+                    </span>
+                    <img
+                      src="/images/exhaust-fans/fibercone-fan.jpg"
+                      alt="Fibercone Exhaust Fan GreenTech"
+                      className="w-full h-full object-contain group-hover:scale-108 transition-transform duration-500"
+                    />
+                  </div>
+                  <h4 className="text-sm font-black text-[#142D4E] group-hover:text-[#009B4D] transition-colors leading-snug">
+                    Fibercone Exhaust Fan
+                  </h4>
+                  <p className="text-[11px] text-slate-500 mt-1 leading-snug">
+                    Aerodynamic molded fiberglass housing with high-velocity air exhaust throw.
                   </p>
                 </div>
+
               </div>
             </div>
 
@@ -256,7 +297,150 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── 3. WHAT GREENTECH OFFERS — 4 CORE CATEGORIES ── */}
+      {/* ── 3. LEADERSHIP & CO-FOUNDER SPOTLIGHT ── */}
+      <section className="py-14 sm:py-20 bg-gradient-to-b from-[#F7FAF8] via-white to-[#F7FAF8] border-y border-slate-200">
+        <div className="container-custom">
+          
+          {/* Section Header */}
+          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+            <span className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-[#009B4D] bg-[#009B4D]/10 px-3.5 py-1.5 rounded-full">
+              <UserCheck size={14} className="text-[#009B4D]" /> Company Leadership
+            </span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#142D4E] mt-3 tracking-tight">
+              Meet Our Co-Founder
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-600 mt-2 max-w-lg mx-auto">
+              Leading GreenTech Solutions with practical engineering insight, dedication to quality fabrication, and customer-first industrial partnerships.
+            </p>
+          </div>
+
+          {/* Executive Profile Card */}
+          <div className="max-w-4xl mx-auto bg-white rounded-3xl border border-slate-200/90 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden">
+            <div className="grid grid-cols-1 md:grid-cols-12 items-center">
+              
+              {/* Left Column: Portrait */}
+              <div className="md:col-span-5 bg-gradient-to-br from-slate-50 via-emerald-50/30 to-slate-100 p-6 sm:p-8 flex flex-col items-center justify-center text-center border-b md:border-b-0 md:border-r border-slate-100 self-stretch">
+                <div className="relative w-52 h-52 sm:w-60 sm:h-60 rounded-2xl overflow-hidden shadow-lg border-2 border-white ring-4 ring-emerald-500/10 group bg-slate-200">
+                  <img
+                    src="/images/leadership/ashok-kumar-satsangi-studio.png"
+                    alt="Mr. Ashok Kumar Satsangi - Co-Founder of GreenTech Solutions"
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+
+                <div className="mt-4 flex flex-col items-center gap-1">
+                  <span className="inline-flex items-center gap-1.5 bg-[#009B4D] text-white text-[11px] font-extrabold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-xs">
+                    <ShieldCheck size={12} /> Co-Founder
+                  </span>
+                  <span className="text-xs font-bold text-slate-500 mt-1">
+                    Sector-121, Noida (U.P.)
+                  </span>
+                </div>
+              </div>
+
+              {/* Right Column: Bio, Contact & Actions */}
+              <div className="md:col-span-7 p-6 sm:p-8 lg:p-10 flex flex-col justify-between space-y-6">
+                
+                {/* Name & Title */}
+                <div>
+                  <div className="flex items-center gap-2 text-xs font-bold text-[#009B4D] uppercase tracking-wider mb-1.5">
+                    <Briefcase size={14} /> Executive Leadership
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl font-black text-[#142D4E] tracking-tight">
+                    Mr. Ashok Kumar Satsangi
+                  </h3>
+                  <p className="text-sm font-bold text-emerald-700 mt-0.5">
+                    Co-Founder • GreenTech Solutions
+                  </p>
+                  
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mt-3.5 italic bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+                    &ldquo;Our commitment is to manufacture durable, energy-saving industrial air coolers, ventilation fans, and workshop infrastructure engineered specifically for grueling Indian factory environments.&rdquo;
+                  </p>
+                </div>
+
+                {/* Direct Contact Cards */}
+                <div className="space-y-3">
+                  
+                  {/* Phone & WhatsApp Card */}
+                  <div className="p-4 rounded-2xl bg-emerald-50/70 border border-emerald-200/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-xl bg-[#009B4D] text-white flex items-center justify-center shrink-0 shadow-xs">
+                        <Phone size={18} />
+                      </div>
+                      <div>
+                        <span className="text-[10px] font-extrabold text-slate-500 uppercase tracking-wider block">
+                          Calling & WhatsApp Number
+                        </span>
+                        <a
+                          href="tel:+919336373719"
+                          className="text-base font-black text-slate-900 font-mono hover:text-[#009B4D] transition-colors block"
+                        >
+                          +91 93363 73719
+                        </a>
+                      </div>
+                    </div>
+
+                    {/* Action buttons */}
+                    <div className="flex items-center gap-2 shrink-0">
+                      <a
+                        href="https://wa.me/919336373719?text=Hello%20Mr.%20Ashok%20Kumar%20Satsangi,%20I%20would%20like%20to%20connect%20with%20GreenTech%20Solutions."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-bold shadow-xs hover:shadow transition-all"
+                      >
+                        <MessageCircle size={14} />
+                        <span>WhatsApp</span>
+                      </a>
+                      <a
+                        href="tel:+919336373719"
+                        className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#142D4E] hover:bg-[#0B1726] text-white text-xs font-bold shadow-xs hover:shadow transition-all"
+                      >
+                        <Phone size={14} />
+                        <span>Call</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Direct Email Card */}
+                  <a
+                    href="mailto:greentech_solutions02@outlook.com"
+                    className="p-3.5 rounded-2xl bg-slate-50 hover:bg-slate-100 border border-slate-200/80 transition-all flex items-center gap-3 group"
+                  >
+                    <div className="w-10 h-10 rounded-xl bg-slate-200 group-hover:bg-[#009B4D] text-slate-700 group-hover:text-white flex items-center justify-center shrink-0 transition-colors">
+                      <Mail size={18} />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <span className="text-[10px] font-extrabold text-slate-500 uppercase tracking-wider block">
+                        Official Direct Email
+                      </span>
+                      <span className="text-xs sm:text-sm font-bold text-[#142D4E] group-hover:text-[#009B4D] transition-colors truncate block font-mono">
+                        greentech_solutions02@outlook.com
+                      </span>
+                    </div>
+                  </a>
+
+                  {/* Office & GSTIN Meta */}
+                  <div className="pt-2 flex flex-wrap items-center gap-3 text-[11px] text-slate-500">
+                    <span className="flex items-center gap-1">
+                      <MapPin size={13} className="text-[#009B4D]" /> Office No-7, Yadu Market, Sector-121 Noida
+                    </span>
+                    <span>•</span>
+                    <span className="flex items-center gap-1">
+                      <FileCheck size={13} className="text-[#009B4D]" /> GSTIN: 09BSTPD0181R1ZO
+                    </span>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ── 4. WHAT GREENTECH OFFERS — 4 CORE CATEGORIES ── */}
       <section className="py-16 bg-[#F5F7F6] border-y border-slate-200">
         <div className="container-custom">
           <div className="max-w-3xl mb-12">

@@ -3,22 +3,20 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const clientLogos = [
   { name: "Mangla Textiles", logo: "/images/clients/logo-mangla.png", sector: "Textiles" },
-  { name: "R-Exim India", logo: "/images/clients/logo-rexim.png", sector: "Global Trade" },
-  { name: "CTA Associates", logo: "/images/clients/logo-cta.png", sector: "Engineering Tech" },
-  { name: "Tulsi Creation", logo: "/images/clients/logo-tulsi.png", sector: "Apparel" },
-  { name: "Maple Industries", logo: "/images/clients/logo-maple.png", sector: "Eco Manufacturing" },
-  { name: "FairDeal", logo: "/images/clients/logo-fairdeal.png", sector: "Consumer Products" },
-  { name: "GK Fashions Pvt Ltd", logo: "/images/clients/logo-gkfashions.png", sector: "Garments" },
-  { name: "Cotton Concepts", logo: "/images/clients/logo-cottonconcepts.png", sector: "Fabrics" },
-  { name: "Manish", logo: "/images/clients/logo-manish.png", sector: "Textile Exports" },
-  { name: "Fenzy Styles", logo: "/images/clients/logo-fenzystyles.png", sector: "Active Wear" },
-  { name: "Galaxy Garments", logo: "/images/clients/logo-galaxygarments.png", sector: "Apparel Mills" },
-  { name: "Sony Enterprises", logo: "/images/clients/logo-sonyenterprises.png", sector: "Industrial Spares" },
-  { name: "Shankar Fenestrations", logo: "/images/clients/logo-shankarfenestrations.png", sector: "Glass & Infrastructure" },
   { name: "Roto Pumps Ltd", logo: "/images/clients/logo-rotopumps.png", sector: "Pumps (Since 1968)" },
+  { name: "FairDeal", logo: "/images/clients/logo-fairdeal.png", sector: "Consumer Products" },
+  { name: "Tulsi Creation", logo: "/images/clients/logo-tulsi.png", sector: "Apparel Exports" },
+  { name: "Maple Industries", logo: "/images/clients/logo-maple.png", sector: "Eco Manufacturing" },
+  { name: "CTA Associates", logo: "/images/clients/logo-cta.png", sector: "Engineering Tech" },
+  { name: "Shankar Glass (SFG)", logo: "/images/clients/logo-shankarfenestrations.png", sector: "Glass & Infra" },
   { name: "SG Global Exports", logo: "/images/clients/logo-sgglobal.png", sector: "Supply Chain" },
+  { name: "Kumar Labels", logo: "/images/clients/logo-kumarlabels.png", sector: "Packaging & Labels" },
   { name: "Krishna Beads (KBI)", logo: "/images/clients/logo-krishnabeads.png", sector: "Industries LLP" },
-  { name: "Sparklerr", logo: "/images/clients/logo-sparklerr.png", sector: "Industrial Lighting" },
+  { name: "Sony Enterprises", logo: "/images/clients/logo-sonyenterprises.png", sector: "Industrial Spares" },
+  { name: "GK Fashions Pvt Ltd", logo: "/images/clients/logo-gkfashions.png", sector: "Garments" },
+  { name: "Manish", logo: "/images/clients/logo-manish.png", sector: "Textile Exports" },
+  { name: "Sparkler", logo: "/images/clients/logo-sparklerr.png", sector: "Industrial Lighting" },
+  { name: "Cotton Concepts", logo: "/images/clients/logo-cottonconcepts.png", sector: "Fabrics" },
 ];
 
 export default function ClientLogoSlider() {
