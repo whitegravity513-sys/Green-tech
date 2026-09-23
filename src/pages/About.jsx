@@ -618,7 +618,7 @@ export default function About() {
                   <img
                     src={client.logo}
                     alt={client.name}
-                    className="max-h-11 max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                    className="max-h-12 max-w-full object-contain filter-none group-hover:scale-110 transition-all duration-300"
                     onError={(e) => {
                       e.currentTarget.style.display = "none";
                     }}

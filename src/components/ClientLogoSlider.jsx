@@ -83,7 +83,7 @@ export default function ClientLogoSlider() {
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-[#009B4D] animate-pulse" />
           <span className="font-semibold text-slate-600">
-            17+ Verified Industrial Clients From Official Brochure
+            15 Verified Industrial Clients From Official Brochure
           </span>
         </div>
 
