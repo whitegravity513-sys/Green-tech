@@ -223,25 +223,6 @@ export default function Footer() {
                 <span className="text-white font-bold block mb-0.5">GSTIN Registered</span>
                 <span className="font-mono text-emerald-400 font-semibold">09BSTPD0181R1Z0</span>
               </div>
-
-              {/* IndiaMART Verified Supplier & Catalog */}
-              <a
-                href={companyInfo.social.indiamart}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-[11px] bg-emerald-950/40 hover:bg-emerald-900/50 text-slate-300 rounded-xl p-3 border border-emerald-500/30 hover:border-emerald-500/60 transition-all group"
-              >
-                <div className="flex items-center justify-between text-white font-bold mb-1">
-                  <span className="flex items-center gap-1.5 text-emerald-300">
-                    <CheckCircle2 size={13} className="text-emerald-400 shrink-0" />
-                    IndiaMART Verified Supplier
-                  </span>
-                  <ExternalLink size={12} className="text-slate-400 group-hover:text-emerald-300 transition-colors" />
-                </div>
-                <span className="text-slate-300 block text-[11px]">
-                  View our catalog ⬇️
-                </span>
-              </a>
             </div>
           </div>
 

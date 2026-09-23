@@ -76,9 +76,9 @@ export default function EnquiryForm({ preselectedProduct = "" }) {
           Thank you, <strong>{formData.fullName}</strong>! We have received your enquiry for{" "}
           <strong>{formData.product}</strong>.
         </p>
-        <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6 text-left">
-          <p className="text-amber-800 text-sm">
-            <strong>📌 Demo Notice:</strong> This is a frontend demo form. For immediate response, please contact us directly via WhatsApp or phone.
+        <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-4 mb-6 text-left">
+          <p className="text-emerald-900 text-sm">
+            Our technical sales team will review your inquiry and connect with you promptly. For immediate assistance or technical quotations, feel free to contact us directly on WhatsApp or phone.
           </p>
         </div>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
