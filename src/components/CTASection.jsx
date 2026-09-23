@@ -128,13 +128,13 @@ export default function CTASection({ companyInfo, wa }) {
                         </Link>
 
                         <a
-                            href={`https://wa.me/${companyInfo?.contact?.whatsappRaw || "919336331985"}?text=${wa || "Hi GreenTech!"}`}
+                            href={`https://wa.me/${companyInfo?.contact?.whatsappRaw || "919336373719"}?text=${wa || "Hi GreenTech!"}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-white text-slate-900 px-8 py-3.5 text-sm font-bold shadow-xl hover:bg-slate-100 hover:text-[#009B4D] transition-all transform hover:scale-105"
                         >
                             <PhoneCall size={16} className="text-[#009B4D]" />
-                            <span>Chat on WhatsApp (+91 9336331985)</span>
+                            <span>Chat on WhatsApp ({companyInfo?.contact?.whatsapp || "+91 93363 73719"})</span>
                         </a>
                     </div>
 

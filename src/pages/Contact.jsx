@@ -28,7 +28,7 @@ export default function Contact() {
     if (meta)
       meta.setAttribute(
         "content",
-        "Contact GreenTech Solutions in Sector 121, Noida for Industrial Air Coolers, Exhaust Fans, and Commercial LED lighting. WhatsApp: +91 9336331985."
+        `Contact GreenTech Solutions in Sector 121, Noida for Industrial Air Coolers, Exhaust Fans, and Commercial LED lighting. WhatsApp: ${companyInfo.contact.whatsapp}.`
       );
   }, []);
 
@@ -124,7 +124,7 @@ export default function Contact() {
                     </span>
                     <span className="text-base font-black block mt-0.5">WhatsApp Chat</span>
                     <span className="text-xs text-emerald-100 mt-1 block font-mono">
-                      +91 9336331985
+                      {companyInfo.contact.whatsapp}
                     </span>
                   </div>
                 </a>
@@ -177,7 +177,7 @@ export default function Contact() {
                     <FileText size={18} className="text-emerald-600 shrink-0 mt-0.5" />
                     <div>
                       <strong className="text-slate-900 block">GSTIN:</strong>
-                      <span className="font-mono text-slate-800 font-semibold">09BSTPD0181R1ZO</span>
+                      <span className="font-mono text-slate-800 font-semibold">09BSTPD0181R1Z0</span>
                     </div>
                   </div>
 

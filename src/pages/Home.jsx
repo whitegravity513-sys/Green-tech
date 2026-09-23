@@ -991,7 +991,7 @@ export default function Home() {
               </div>
 
               <div className="pt-6 text-xs text-slate-500 font-medium border-t border-slate-200/80 mt-8">
-                Office No-7, Yadu Market, FNG Service Road, Sector-121, Noida | WhatsApp: +91 9336331985
+                Office No-7, Yadu Market, FNG Service Road, Sector-121, Noida | WhatsApp: {companyInfo.contact.whatsapp}
               </div>
 
             </div>

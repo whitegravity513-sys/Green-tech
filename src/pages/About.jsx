@@ -426,7 +426,7 @@ export default function About() {
                     </span>
                     <span>•</span>
                     <span className="flex items-center gap-1">
-                      <FileCheck size={13} className="text-[#009B4D]" /> GSTIN: 09BSTPD0181R1ZO
+                      <FileCheck size={13} className="text-[#009B4D]" /> GSTIN: 09BSTPD0181R1Z0
                     </span>
                   </div>
 

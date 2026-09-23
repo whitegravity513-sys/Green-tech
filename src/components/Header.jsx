@@ -273,7 +273,7 @@ export default function Header() {
                 className="w-full flex items-center justify-center gap-2 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-200 py-3 text-xs font-bold"
               >
                 <MessageCircle size={16} />
-                <span>WhatsApp: {companyInfo.contact.phone}</span>
+                <span>WhatsApp: {companyInfo.contact.whatsapp}</span>
               </a>
 
               <Link

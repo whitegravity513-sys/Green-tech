@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { companyInfo } from "../data/company";
 
 export default function NotFound() {
   return (
@@ -25,7 +26,7 @@ export default function NotFound() {
           <p className="text-xs text-gray-400">
             Need help?{" "}
             <a
-              href="https://wa.me/919336331985"
+              href={`https://wa.me/${companyInfo.contact.whatsappRaw}`}
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:underline font-semibold"

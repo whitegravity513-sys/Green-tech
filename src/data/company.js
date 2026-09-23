@@ -7,8 +7,17 @@ export const companyInfo = {
     "GreenTech Solutions is a leading manufacturer and supplier of industrial air coolers, exhaust fans, industrial lights, and factory furniture & storage solutions. We are committed to delivering high-performance, energy-efficient industrial products that help businesses create safer, cooler, and more productive work environments.",
   shortDescription:
     "High-performance industrial cooling, ventilation, lighting, and storage solutions for modern industries.",
-  gstin: "09BSTPD0181R1ZO",
+  gstin: "09BSTPD0181R1Z0",
   madeInIndia: true,
+  indiamartVerified: true,
+  indiamartCatalogUrl: "https://IndiaMART.in/bZvQJPGn",
+
+  // Official Social & B2B Channels
+  social: {
+    whatsappChannel: "https://whatsapp.com/channel/0029Vb7coYUGU3BNFYVKWV3x",
+    youtube: "https://youtube.com/@greentechsolutions12?si=vzSPLZLAbC1LBrmF",
+    indiamart: "https://IndiaMART.in/bZvQJPGn",
+  },
 
   contact: {
     address:
@@ -16,9 +25,9 @@ export const companyInfo = {
     city: "Noida",
     state: "Uttar Pradesh",
     pincode: "201307",
-    whatsapp: "+91 9336331985",
-    whatsappRaw: "919336331985",
-    phone: "+91 9336331985",
+    whatsapp: "+91 93363 73719",
+    whatsappRaw: "919336373719",
+    phone: "+91 93363 73719",
     email: "greentech_solutions02@outlook.com",
     altEmail: "akkaizenmkting62@gmail.com",
     owner: "Mr. Ashok Kumar Satsangi",
