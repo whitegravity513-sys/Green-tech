@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import HeroSlider from "../components/HeroSlider";
 import ClientLogoSlider from "../components/ClientLogoSlider";
+import ProductVideoShowcase from "../components/ProductVideoShowcase";
 import { companyInfo } from "../data/company";
 
 export default function Home() {
@@ -586,7 +587,12 @@ export default function Home() {
       </section>
 
       {/* ══════════════════════════════════════════════════
-          4. ABOUT GREENTECH PREVIEW (TWO-COLUMN ARCHITECTURAL COMPOSITION)
+          4. LIVE PRODUCT & MANUFACTURING VIDEO SHOWCASE
+      ══════════════════════════════════════════════════ */}
+      <ProductVideoShowcase />
+
+      {/* ══════════════════════════════════════════════════
+          5. ABOUT GREENTECH PREVIEW (TWO-COLUMN ARCHITECTURAL COMPOSITION)
       ══════════════════════════════════════════════════ */}
       <section className="py-16 sm:py-24 bg-[#F5F7F6] border-b border-slate-200">
         <div className="container-custom px-4">
