@@ -17,8 +17,6 @@ export default function ProductCard({ product }) {
 
   return (
     <div className="group relative bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-[#009B4D] transition-all duration-300 flex flex-col overflow-hidden">
-      
-      {/* ── BADGE ── */}
       <div className="absolute top-3 left-3 z-10 flex flex-col gap-1">
         {product.badge ? (
           <span className="rounded-full bg-[#009B4D] px-3 py-1 text-[11px] font-extrabold uppercase tracking-wider text-white shadow-sm">
@@ -31,25 +29,21 @@ export default function ProductCard({ product }) {
         )}
       </div>
 
-      {/* ── IMAGE AREA ── */}
       <Link
         to={`/products/${product.id}`}
-        className="relative block aspect-[4/3] w-full overflow-hidden bg-slate-50 p-4"
+        className="relative block aspect-[4/3] w-full overflow-hidden bg-gradient-to-b from-slate-50 to-white p-2.5 flex items-center justify-center"
       >
         <ProductImage
           src={product.image}
           alt={product.name}
           category={product.category}
           name={product.name}
-          className="h-full w-full"
-          imgClassName="h-full w-full object-contain object-center transition-transform duration-500 group-hover:scale-108"
+          className="h-full w-full flex items-center justify-center"
+          imgClassName="h-full w-full object-contain object-center transition-transform duration-500 group-hover:scale-105"
         />
       </Link>
 
-      {/* ── CARD BODY ── */}
       <div className="p-4 sm:p-5 flex flex-col flex-1">
-        
-        {/* Rating & Category */}
         <div className="flex items-center justify-between gap-2 mb-2">
           <span className="text-[11px] font-bold uppercase tracking-wider text-[#009B4D]">
             {product.categoryName || "GreenTech Solution"}
@@ -60,19 +54,16 @@ export default function ProductCard({ product }) {
           </div>
         </div>
 
-        {/* Product Title */}
         <h3 className="font-bold text-[#142D4E] text-sm sm:text-base leading-snug mb-2 group-hover:text-[#009B4D] transition-colors line-clamp-2">
           <Link to={`/products/${product.id}`}>
             {product.name}
           </Link>
         </h3>
 
-        {/* Short description */}
         <p className="text-slate-500 text-xs leading-relaxed line-clamp-2 mb-4">
           {product.shortDescription}
         </p>
 
-        {/* Technical Specs Tags */}
         {product.features && product.features.length > 0 && (
           <div className="mt-auto mb-4 space-y-1 pt-3 border-t border-slate-100">
             {product.features.slice(0, 2).map((feat, i) => (
@@ -84,7 +75,6 @@ export default function ProductCard({ product }) {
           </div>
         )}
 
-        {/* Factory Direct Pricing Label */}
         <div className="mb-4 flex items-baseline justify-between pt-1">
           <div>
             <span className="text-[11px] font-semibold text-slate-400 block uppercase">
@@ -99,7 +89,6 @@ export default function ProductCard({ product }) {
           </span>
         </div>
 
-        {/* Action Buttons: WhatsApp Enquiry + Details */}
         <div className="grid grid-cols-2 gap-2 pt-2 border-t border-slate-100">
           <Link
             to={`/products/${product.id}`}
@@ -119,9 +108,7 @@ export default function ProductCard({ product }) {
             <span>Enquire</span>
           </a>
         </div>
-
       </div>
-
     </div>
   );
 }

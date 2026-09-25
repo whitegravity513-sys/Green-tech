@@ -21,7 +21,6 @@ export default function CTASection({ companyInfo, wa }) {
     const [ctaVis, setCtaVis] = useState(false);
     const [ctaSlide, setCtaSlide] = useState(0);
 
-    // Reveal animation
     useEffect(() => {
         const element = ctaRef.current;
         if (!element) return;
@@ -40,7 +39,6 @@ export default function CTASection({ companyInfo, wa }) {
         return () => observer.disconnect();
     }, []);
 
-    // Slide background
     useEffect(() => {
         const timer = setInterval(() => {
             setCtaSlide((prev) => (prev + 1) % ctaImages.length);
@@ -54,7 +52,7 @@ export default function CTASection({ companyInfo, wa }) {
             ref={ctaRef}
             className="relative isolate overflow-hidden bg-slate-900 py-20 md:py-24 text-white select-none"
         >
-            {/* ── BACKGROUND IMAGE (CLEAR & VISIBLE) ── */}
+
             <div className="absolute inset-0 overflow-hidden">
                 {ctaImages.map((image, index) => (
                     <img
@@ -68,7 +66,6 @@ export default function CTASection({ companyInfo, wa }) {
                     />
                 ))}
 
-                {/* Subtle dark green vignette so text is easy to read while image is clear */}
                 <div
                     className="absolute inset-0"
                     style={{
@@ -78,17 +75,14 @@ export default function CTASection({ companyInfo, wa }) {
                 />
             </div>
 
-            {/* ── MAIN CTA CONTENT (CENTERED & IMPACTFUL) ── */}
             <div className="container-custom relative z-10">
                 <div className="mx-auto max-w-3xl text-center">
 
-                    {/* Badge */}
                     <div className="inline-flex items-center gap-2 rounded-full bg-emerald-500/90 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-white backdrop-blur-md mb-5 shadow-lg">
 
                         <span>GreenTech Solutions • Direct Factory Supply</span>
                     </div>
 
-                    {/* Heading */}
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white leading-tight drop-shadow-md">
                         Ready to Cut Energy Bills & Upgrade{" "}
                         <span className="text-emerald-400 underline decoration-emerald-500/40">
@@ -96,12 +90,10 @@ export default function CTASection({ companyInfo, wa }) {
                         </span>
                     </h2>
 
-                    {/* Description */}
                     <p className="mt-4 text-base sm:text-lg text-slate-100 max-w-2xl mx-auto leading-relaxed drop-shadow">
                         Get comprehensive industrial cooling sizing, ducting blueprints, and direct manufacturer pricing for your plant.
                     </p>
 
-                    {/* Value Badges */}
                     <div className="mt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs sm:text-sm font-bold text-white">
                         <span className="flex items-center gap-1.5 bg-black/40 backdrop-blur-md border border-white/20 px-3.5 py-1.5 rounded-full">
                             <CheckCircle2 size={15} className="text-emerald-400" />
@@ -117,7 +109,6 @@ export default function CTASection({ companyInfo, wa }) {
                         </span>
                     </div>
 
-                    {/* Action Buttons */}
                     <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                         <Link
                             to="/contact"

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 
 export default function Breadcrumb({ items }) {
-  // items: [{label: 'Home', href: '/'}, {label: 'Products', href: '/products'}, {label: 'Product Name'}]
+
   return (
     <nav aria-label="Breadcrumb" className="bg-graybg border-b border-gray-200 py-3">
       <div className="container-custom">

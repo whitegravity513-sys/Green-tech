@@ -135,12 +135,9 @@ export default function Products() {
 
   return (
     <div className="bg-[#FAFDFB] min-h-screen text-[#17212B]">
-      
-      {/* ══════════════════════════════════════════════════
-          1. PRODUCTS PAGE HERO SECTION
-      ══════════════════════════════════════════════════ */}
+
       <section className="relative bg-gradient-to-r from-[#0B1726] via-[#142D4E] to-[#0B1726] text-white py-12 sm:py-16 overflow-hidden">
-        {/* Subtle grid pattern */}
+
         <div
           className="absolute inset-0 opacity-[0.05] pointer-events-none"
           style={{
@@ -150,7 +147,7 @@ export default function Products() {
         />
 
         <div className="container-custom relative z-10 px-4">
-          {/* Breadcrumb */}
+
           <div className="flex items-center gap-2 text-xs font-semibold text-emerald-400 mb-3">
             <Link to="/" className="hover:text-white transition-colors">
               Home
@@ -181,7 +178,6 @@ export default function Products() {
               Heavy-duty ductable coolers (0.75kW – 4.5kW), direct & belt-drive exhaust fans, commercial high-bay UFO LEDs, and factory storage furniture engineered for Indian manufacturing plants.
             </p>
 
-            {/* Quick Assurance Badges */}
             <div className="mt-6 flex flex-wrap items-center gap-3 sm:gap-6 text-xs sm:text-sm font-semibold text-white/90">
               <span className="flex items-center gap-1.5 bg-white/5 border border-white/10 px-3 py-1.5 rounded-lg">
                 <Truck size={15} className="text-[#009B4D]" /> Pan-India Supply
@@ -197,16 +193,11 @@ export default function Products() {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════════════
-          2. ALL PRODUCTS SHOWCASE (TOOLBAR + CARDS GRID)
-      ══════════════════════════════════════════════════ */}
       <section className="py-8 sm:py-12">
         <div className="container-custom px-4">
-          
-          {/* Controls Bar: Category Pills + Search */}
+
           <div className="bg-white rounded-2xl border border-slate-200/90 p-3 sm:p-4 shadow-xs mb-8 flex flex-col lg:flex-row items-center justify-between gap-4">
-            
-            {/* Category Filter Pills */}
+
             <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto w-full lg:w-auto no-scrollbar py-0.5">
               {categoryList.map((cat) => {
                 const Icon = cat.icon;
@@ -236,7 +227,6 @@ export default function Products() {
               })}
             </div>
 
-            {/* Product Count & Search Box */}
             <div className="flex items-center gap-3 w-full lg:w-auto shrink-0 justify-between lg:justify-end">
               <span className="text-xs font-semibold text-slate-500 shrink-0 hidden sm:inline-block">
                 Showing <strong className="text-slate-900">{filteredProducts.length}</strong> Products
@@ -259,7 +249,6 @@ export default function Products() {
 
           </div>
 
-          {/* All Products Grid */}
           {filteredProducts.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {filteredProducts.map((product) => (
@@ -287,13 +276,9 @@ export default function Products() {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════════════
-          3. CLIENT TESTIMONIALS & REVIEWS SECTION
-      ══════════════════════════════════════════════════ */}
       <section className="py-16 bg-[#F5F8F6] border-t border-slate-200">
         <div className="container-custom px-4">
-          
-          {/* Section Header */}
+
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#009B4D] bg-[#009B4D]/10 px-3.5 py-1.5 rounded-full mb-3">
               <Star size={13} className="text-amber-500 fill-amber-500" />
@@ -307,7 +292,6 @@ export default function Products() {
             </p>
           </div>
 
-          {/* Testimonial Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {clientReviews.map((rev) => (
               <div
@@ -315,7 +299,7 @@ export default function Products() {
                 className="bg-white rounded-2xl p-5 border border-slate-200/90 shadow-xs hover:shadow-lg hover:border-[#009B4D] transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
-                  {/* Star Rating & Equipment Badge */}
+
                   <div className="flex items-center justify-between gap-2 mb-3">
                     <div className="flex items-center gap-0.5 text-amber-400">
                       {[...Array(rev.rating)].map((_, i) => (
@@ -327,13 +311,11 @@ export default function Products() {
                     </span>
                   </div>
 
-                  {/* Review Text */}
                   <p className="text-xs text-slate-700 leading-relaxed italic mb-4">
                     "{rev.review}"
                   </p>
                 </div>
 
-                {/* Author & Client Info */}
                 <div className="pt-3 border-t border-slate-100">
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-[#142D4E] font-extrabold text-xs shrink-0">
@@ -360,7 +342,6 @@ export default function Products() {
             ))}
           </div>
 
-          {/* Bottom Trust Indicators */}
           <div className="mt-12 pt-8 border-t border-slate-200 flex flex-wrap items-center justify-center gap-6 sm:gap-12 text-xs font-bold text-slate-600">
             <span className="flex items-center gap-2">
               <CheckCircle2 size={16} className="text-[#009B4D]" />

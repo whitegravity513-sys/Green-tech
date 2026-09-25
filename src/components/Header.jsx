@@ -14,19 +14,16 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const { pathname } = useLocation();
 
-  // Close menu on route change
   useEffect(() => {
     setMobileOpen(false);
   }, [pathname]);
 
-  // Scroll detection for navbar state
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Prevent body scroll when mobile menu open
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => {
@@ -36,7 +33,7 @@ export default function Header() {
 
   return (
     <>
-      {/* ── TOP UTILITY STRIP (VERIFIED CONTACT DETAILS) ── */}
+
       <div className="hidden md:block bg-[#142D4E] text-white text-xs py-2 border-b border-white/10 select-none">
         <div className="container-custom flex items-center justify-between">
           <div className="flex items-center gap-6">
@@ -68,7 +65,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* ── MAIN RESPONSIVE NAVBAR ── */}
       <header
         className={`sticky top-0 z-50 transition-all duration-300 ${
           scrolled
@@ -78,8 +74,7 @@ export default function Header() {
       >
         <div className="container-custom px-3 sm:px-4">
           <div className="flex items-center justify-between h-18 sm:h-22 md:h-24">
-            
-            {/* ── COMPANY LOGO (ENLARGED & TRANSPARENT PNG) ── */}
+
             <Link to="/" className="flex items-center gap-2 flex-shrink-0 group">
               <img
                 src="/images/logo/greentech-logo.png"
@@ -91,10 +86,8 @@ export default function Header() {
               />
             </Link>
 
-            {/* ── DESKTOP NAVIGATION ── */}
             <nav className="hidden lg:flex items-center gap-1 xl:gap-2" aria-label="Main navigation">
-              
-              {/* Home */}
+
               <NavLink
                 to="/"
                 end
@@ -109,7 +102,6 @@ export default function Header() {
                 Home
               </NavLink>
 
-              {/* About Us */}
               <NavLink
                 to="/about"
                 className={({ isActive }) =>
@@ -123,7 +115,6 @@ export default function Header() {
                 About Us
               </NavLink>
 
-              {/* Products Direct Link */}
               <NavLink
                 to="/products"
                 className={({ isActive }) =>
@@ -137,7 +128,6 @@ export default function Header() {
                 Products
               </NavLink>
 
-              {/* Industries */}
               <NavLink
                 to="/industries"
                 className={({ isActive }) =>
@@ -151,7 +141,6 @@ export default function Header() {
                 Industries
               </NavLink>
 
-              {/* Contact */}
               <NavLink
                 to="/contact"
                 className={({ isActive }) =>
@@ -167,10 +156,8 @@ export default function Header() {
 
             </nav>
 
-            {/* ── RIGHT ACTIONS ── */}
             <div className="flex items-center gap-2 sm:gap-3">
-              
-              {/* WhatsApp Quick Action */}
+
               <a
                 href={`https://wa.me/${companyInfo.contact.whatsappRaw}`}
                 target="_blank"
@@ -181,7 +168,6 @@ export default function Header() {
                 <span>WhatsApp</span>
               </a>
 
-              {/* Primary Get a Quote Button */}
               <Link
                 to="/contact"
                 className="inline-flex items-center justify-center bg-[#009B4D] hover:bg-[#007A3D] text-white font-bold py-2.5 px-3.5 sm:px-5 rounded-xl text-xs sm:text-sm shadow-md hover:shadow-lg transition-all"
@@ -189,7 +175,6 @@ export default function Header() {
                 <span>Get a Quote</span>
               </Link>
 
-              {/* Mobile Hamburger Button */}
               <button
                 type="button"
                 onClick={() => setMobileOpen(!mobileOpen)}
@@ -205,12 +190,11 @@ export default function Header() {
         </div>
       </header>
 
-      {/* ── MOBILE DRAWER NAVIGATION ── */}
       {mobileOpen && (
         <div className="lg:hidden fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-sm animate-fade-in">
           <div className="fixed top-0 right-0 w-[85%] max-w-[340px] h-full bg-white shadow-2xl p-6 overflow-y-auto flex flex-col justify-between">
             <div>
-              {/* Drawer Header */}
+
               <div className="flex items-center justify-between pb-4 border-b border-slate-100 mb-4">
                 <img
                   src="/images/logo/greentech-logo.png"
@@ -226,7 +210,6 @@ export default function Header() {
                 </button>
               </div>
 
-              {/* Drawer Links */}
               <nav className="space-y-1 text-sm font-bold">
                 <Link
                   to="/"
@@ -264,7 +247,6 @@ export default function Header() {
               </nav>
             </div>
 
-            {/* Drawer Bottom Actions */}
             <div className="pt-6 border-t border-slate-100 space-y-3">
               <a
                 href={`https://wa.me/${companyInfo.contact.whatsappRaw}`}

@@ -1,4 +1,3 @@
-// Company static data - edit this file to update company information across the site
 
 export const companyInfo = {
   name: "GreenTech Solutions",
@@ -12,7 +11,6 @@ export const companyInfo = {
   indiamartVerified: true,
   indiamartCatalogUrl: "https://IndiaMART.in/bZvQJPGn",
 
-  // Official Social & B2B Channels
   social: {
     whatsappChannel: "https://whatsapp.com/channel/0029Vb7coYUGU3BNFYVKWV3x",
     youtube: "https://youtube.com/@greentechsolutions12?si=vzSPLZLAbC1LBrmF",
@@ -53,7 +51,6 @@ export const companyInfo = {
     note: "WhatsApp enquiries accepted 24/7",
   },
 
-  // Stats shown in Home hero highlights section
   highlights: [
     {
       id: 1,
@@ -85,7 +82,6 @@ export const companyInfo = {
     },
   ],
 
-  // Mission, Vision, Values
   mission:
     "To provide industries across India with reliable, energy-efficient, and cost-effective industrial cooling, ventilation, lighting, and storage solutions that improve workplace comfort and productivity.",
   vision:
@@ -99,7 +95,6 @@ export const companyInfo = {
     "Pan-India accessibility",
   ],
 
-  // Strengths on About page
   strengths: [
     {
       icon: "Package",
@@ -133,7 +128,6 @@ export const companyInfo = {
     },
   ],
 
-  // Why Choose GreenTech section
   whyChoose: [
     {
       icon: "ShieldCheck",
@@ -161,7 +155,6 @@ export const companyInfo = {
     },
   ],
 
-  // Industries we serve
   industries: [
     { name: "Manufacturing", icon: "Factory" },
     { name: "Warehousing", icon: "Warehouse" },
@@ -177,7 +170,6 @@ export const companyInfo = {
     { name: "Other Industries", icon: "Building2" },
   ],
 
-  // Clients list (verified 15 from catalogue)
   clients: [
     { name: "Mangla Textiles", logo: "/images/clients/logo-mangla.png", sector: "Textile Mill" },
     { name: "Roto Pumps Ltd", logo: "/images/clients/logo-rotopumps.png", sector: "Pumps (Since 1968)" },

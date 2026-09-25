@@ -1,10 +1,6 @@
-// All products static data
-// Pure authentic products without duplicates matching factory brochure & real Google catalog
 
 export const products = [
-  // =====================
-  // AIR COOLERS (4 DISTINCT MODELS)
-  // =====================
+
   {
     id: "industrial-ductable-air-cooler",
     name: "Industrial Ductable Air Cooler",
@@ -156,9 +152,6 @@ export const products = [
     badge: "Heavy Duty SS",
   },
 
-  // =====================
-  // EXHAUST FANS (3 AUTHENTIC DISTINCT MODELS)
-  // =====================
   {
     id: "direct-drive-exhaust-fan",
     name: "Industrial Direct Drive Exhaust Fan (GTS-800 to GTS-1530)",
@@ -273,10 +266,39 @@ export const products = [
     ],
     badge: "Fiberglass Cone",
   },
+  {
+    id: "industrial-rooftop-exhaust-fan",
+    name: "Industrial Rooftop Exhaust Fan Unit",
+    category: "exhaust-fans",
+    categoryName: "Industrial Exhaust Fans",
+    shortDescription:
+      "Heavy-duty aerodynamic rooftop cowl exhaust fan system for factory shed roofs and large warehouse ventilation.",
+    description:
+      "GreenTech Industrial Rooftop Exhaust Fans are engineered for roof-mounted installation across factory sheds and warehouses. Featuring an aerodynamic curved fiberglass weather hood, heavy-duty axial extraction impeller, and weatherproof rain cowl, they continuously expel rising heat, smoke, and industrial fumes without ducting bottlenecks.",
+    image: "/images/exhaust-fans/rooftop-exhaust-fan.jpg",
+    gallery: [
+      "/images/exhaust-fans/rooftop-exhaust-fan.jpg",
+      "/images/exhaust-fans/fibercone-rooftop.jpg",
+      "/images/exhaust-fans/fibercone-fan.jpg",
+    ],
+    features: [
+      "Aerodynamic curved fiberglass roof cowl discharge housing",
+      "Direct roof curb mounting for maximum upward heat evacuation",
+      "Weather-proof, UV-stabilized and rain-deflecting design",
+      "High-CFM heavy-duty industrial motor with thermal protection",
+      "Continuous 24/7 factory heat and fume removal",
+      "Zero rainwater entry even during severe storms",
+    ],
+    specs: null,
+    benefits: [
+      "Direct Roof Mounting",
+      "Continuous Heat Removal",
+      "Weather & Storm Proof",
+      "High Airflow Capacity",
+    ],
+    badge: "Rooftop Series",
+  },
 
-  // =====================
-  // INDUSTRIAL LIGHTING (4 ITEMS)
-  // =====================
   {
     id: "high-bay-light",
     name: "Industrial High Bay Light",
@@ -404,9 +426,6 @@ export const products = [
     badge: "Eco-Friendly",
   },
 
-  // =====================
-  // FACTORY & GARMENT FURNITURE (16 AUTHENTIC DISTINCT PRODUCTS)
-  // =====================
   {
     id: "qc-table",
     name: "QC & Garment Inspection Checking Table",
@@ -866,7 +885,6 @@ export const products = [
   },
 ];
 
-// Alias mapping for any previous/duplicate IDs ensuring no links or bookmarks break
 const idAliases = {
   "air-cooler-0-75kw": "industrial-ductable-air-cooler",
   "air-cooler-1-1kw": "top-discharge-air-cooler",
@@ -889,20 +907,17 @@ const idAliases = {
   "storage-cabinets": "steel-almirah-heavy-duty",
 };
 
-// Helper: get product by id with alias support
 export function getProductById(id) {
   if (!id) return null;
   const canonicalId = idAliases[id] || id;
   return products.find((p) => p.id === canonicalId) || null;
 }
 
-// Helper: get products by category
 export function getProductsByCategory(categoryId) {
   if (!categoryId || categoryId === "all") return products;
   return products.filter((p) => p.category === categoryId);
 }
 
-// Helper: get related products (same category, excluding current)
 export function getRelatedProducts(currentId, categoryId, limit = 3) {
   const canonicalId = idAliases[currentId] || currentId;
   return products
@@ -910,5 +925,4 @@ export function getRelatedProducts(currentId, categoryId, limit = 3) {
     .slice(0, limit);
 }
 
-// Product dropdown options for enquiry form
 export const productOptions = products.map((p) => p.name).concat(["Other / Custom Requirement"]);

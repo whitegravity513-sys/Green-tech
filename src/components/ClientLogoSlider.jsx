@@ -23,7 +23,6 @@ export default function ClientLogoSlider() {
   const scrollRef = useRef(null);
   const [isPaused, setIsPaused] = useState(false);
 
-  // Manual smooth scroll step
   const scroll = (direction) => {
     if (scrollRef.current) {
       const { scrollLeft, clientWidth } = scrollRef.current;
@@ -35,7 +34,6 @@ export default function ClientLogoSlider() {
     }
   };
 
-  // Continuous loop duplicate array for seamless marquee
   const loopedLogos = [...clientLogos, ...clientLogos];
 
   return (
@@ -44,11 +42,10 @@ export default function ClientLogoSlider() {
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      {/* Subtle edge fades for smooth infinity effect */}
+
       <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
       <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
-      {/* ── CONTINUOUS AUTO-SLIDING MARQUEE TRACK (ONLY LOGOS) ── */}
       <div
         className="animate-client-marquee py-4"
         style={{
@@ -78,7 +75,6 @@ export default function ClientLogoSlider() {
         ))}
       </div>
 
-      {/* ── MINIMALIST CONTROLS BAR ── */}
       <div className="container-custom mt-6 flex items-center justify-between px-4 text-xs text-slate-500">
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-[#009B4D] animate-pulse" />

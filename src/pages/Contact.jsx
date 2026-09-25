@@ -45,10 +45,9 @@ export default function Contact() {
 
   return (
     <div className="bg-[#FAFDFB] text-slate-800 min-h-screen">
-      
-      {/* ── HEADER BANNER (MATCHING PRODUCTS PAGE HERO) ── */}
+
       <section className="relative bg-gradient-to-r from-[#0B1726] via-[#142D4E] to-[#0B1726] text-white py-12 sm:py-16 overflow-hidden">
-        {/* Subtle engineering grid */}
+
         <div
           className="absolute inset-0 opacity-[0.05] pointer-events-none"
           style={{
@@ -58,7 +57,7 @@ export default function Contact() {
         />
 
         <div className="container-custom relative z-10 px-4">
-          {/* Breadcrumb */}
+
           <div className="flex items-center gap-2 text-xs font-semibold text-emerald-400 mb-3">
             <Link to="/" className="hover:text-white transition-colors">
               Home
@@ -81,7 +80,6 @@ export default function Contact() {
               Get instant factory-direct commercial quotations, plant cooling CFM calculations, ducting layout blueprints, and technical engineer guidance.
             </p>
 
-            {/* Quick Assurance Badges */}
             <div className="mt-6 flex flex-wrap items-center gap-3 sm:gap-6 text-xs sm:text-sm font-semibold text-white/90">
               <span className="flex items-center gap-1.5 bg-white/5 border border-white/10 px-3 py-1.5 rounded-lg">
                 <Truck size={15} className="text-[#009B4D]" /> Pan-India Delivery
@@ -97,18 +95,14 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* ── MAIN CONTACT SECTION ── */}
       <section className="py-12 md:py-16">
         <div className="container-custom px-4">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
 
-            {/* ── LEFT COLUMN: DIRECT DETAILS & MAP (7 COLS) ── */}
             <div className="lg:col-span-7 space-y-6">
 
-              {/* Quick Contact Cards */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
-                {/* WhatsApp Direct */}
                 <a
                   href={`https://wa.me/${companyInfo.contact.whatsappRaw}?text=${waMsg}`}
                   target="_blank"
@@ -129,7 +123,6 @@ export default function Contact() {
                   </div>
                 </a>
 
-                {/* Direct Call / Contact Person */}
                 <a
                   href="tel:+919336373719"
                   className="group p-5 rounded-2xl bg-white border border-emerald-100 hover:border-emerald-300 shadow-sm hover:shadow-md transition-all flex items-start gap-3.5"
@@ -150,7 +143,6 @@ export default function Contact() {
 
               </div>
 
-              {/* Comprehensive Details Card */}
               <div className="rounded-2xl bg-white border border-emerald-100 p-6 sm:p-7 shadow-sm space-y-4">
                 <div className="flex items-center justify-between border-b border-slate-100 pb-3">
                   <h3 className="text-base font-black text-slate-900 flex items-center gap-2">
@@ -207,7 +199,6 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* ── GOOGLE MAP CONTAINER WITH VERIFIED NOIDA LOCATION PIN ── */}
               <div className="rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-sm">
                 <div className="p-4 bg-slate-50 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                   <div className="flex items-start gap-2.5">
@@ -251,7 +242,6 @@ export default function Contact() {
                     className="w-full h-full"
                   />
 
-                  {/* ── LOCATION SIGN BADGE OVERLAY ON MAP ── */}
                   <div className="absolute top-4 left-4 z-10 bg-white/95 backdrop-blur-md p-3 rounded-2xl shadow-xl border border-emerald-200/80 flex items-start gap-3 max-w-[320px] sm:max-w-sm pointer-events-auto">
                     <div className="relative flex items-center justify-center mt-1">
                       <span className="animate-ping absolute inline-flex h-8 w-8 rounded-full bg-red-400 opacity-60"></span>
@@ -289,7 +279,6 @@ export default function Contact() {
 
             </div>
 
-            {/* ── RIGHT COLUMN: INTERACTIVE ENQUIRY FORM (5 COLS) ── */}
             <div className="lg:col-span-5">
               <div className="sticky top-24">
                 <div className="rounded-2xl bg-white border border-emerald-100 p-6 sm:p-7 shadow-sm">
@@ -307,7 +296,6 @@ export default function Contact() {
 
                   <EnquiryForm preselectedProduct={preselectedProduct} />
 
-                  {/* Trust Badges */}
                   <div className="mt-6 pt-5 border-t border-slate-100 grid grid-cols-2 gap-3 text-[11px] text-slate-600">
                     <div className="flex items-center gap-2">
                       <ShieldCheck size={15} className="text-emerald-600 shrink-0" />

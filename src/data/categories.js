@@ -1,4 +1,3 @@
-// Product categories static data
 
 export const categories = [
   {

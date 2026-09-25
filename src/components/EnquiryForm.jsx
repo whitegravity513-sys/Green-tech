@@ -52,7 +52,7 @@ export default function EnquiryForm({ preselectedProduct = "" }) {
       return;
     }
     setLoading(true);
-    // Simulate form submission (no backend)
+
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
@@ -113,7 +113,7 @@ export default function EnquiryForm({ preselectedProduct = "" }) {
 
       <form onSubmit={handleSubmit} noValidate>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {/* Full Name */}
+
           <div>
             <label className="label">Full Name <span className="text-red-500">*</span></label>
             <input
@@ -127,7 +127,6 @@ export default function EnquiryForm({ preselectedProduct = "" }) {
             {errors.fullName && <p className="text-red-500 text-xs mt-1 flex items-center gap-1"><AlertCircle size={12} />{errors.fullName}</p>}
           </div>
 
-          {/* Company Name */}
           <div>
             <label className="label">Company Name</label>
             <input
@@ -140,7 +139,6 @@ export default function EnquiryForm({ preselectedProduct = "" }) {
             />
           </div>
 
-          {/* Phone */}
           <div>
             <label className="label">Phone / WhatsApp <span className="text-red-500">*</span></label>
             <input
@@ -155,7 +153,6 @@ export default function EnquiryForm({ preselectedProduct = "" }) {
             {errors.phone && <p className="text-red-500 text-xs mt-1 flex items-center gap-1"><AlertCircle size={12} />{errors.phone}</p>}
           </div>
 
-          {/* Email */}
           <div>
             <label className="label">Email Address <span className="text-red-500">*</span></label>
             <input
@@ -169,7 +166,6 @@ export default function EnquiryForm({ preselectedProduct = "" }) {
             {errors.email && <p className="text-red-500 text-xs mt-1 flex items-center gap-1"><AlertCircle size={12} />{errors.email}</p>}
           </div>
 
-          {/* Product */}
           <div>
             <label className="label">Product Interested In <span className="text-red-500">*</span></label>
             <select
@@ -186,7 +182,6 @@ export default function EnquiryForm({ preselectedProduct = "" }) {
             {errors.product && <p className="text-red-500 text-xs mt-1 flex items-center gap-1"><AlertCircle size={12} />{errors.product}</p>}
           </div>
 
-          {/* Quantity */}
           <div>
             <label className="label">Quantity Required</label>
             <input
@@ -200,7 +195,6 @@ export default function EnquiryForm({ preselectedProduct = "" }) {
           </div>
         </div>
 
-        {/* Message */}
         <div className="mt-4">
           <label className="label">Message <span className="text-red-500">*</span></label>
           <textarea
@@ -214,7 +208,6 @@ export default function EnquiryForm({ preselectedProduct = "" }) {
           {errors.message && <p className="text-red-500 text-xs mt-1 flex items-center gap-1"><AlertCircle size={12} />{errors.message}</p>}
         </div>
 
-        {/* Submit Buttons */}
         <div className="flex flex-col sm:flex-row gap-3 mt-6">
           <button
             type="submit"

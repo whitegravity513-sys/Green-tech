@@ -1,5 +1,3 @@
-// Reusable image placeholder component
-// Replace image paths in products.js/categories.js to use real photos
 
 export default function ImagePlaceholder({ category = "product", name = "", className = "", aspectRatio = "aspect-video" }) {
   const colors = {

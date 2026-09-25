@@ -59,7 +59,6 @@ export default function HeroSlider() {
     setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
   }, []);
 
-  // Auto-slide every 3.5 seconds
   useEffect(() => {
     if (isPaused) return;
     const timer = setInterval(nextSlide, 3500);
@@ -89,7 +88,7 @@ export default function HeroSlider() {
       }}
       aria-label="GreenTech Solutions Banner Slider"
     >
-      {/* ── 1. FULL-WIDTH BACKGROUND IMAGES (CROSSFADE) ── */}
+
       {slides.map((item, index) => {
         const isActive = current === index;
         return (
@@ -114,7 +113,6 @@ export default function HeroSlider() {
         );
       })}
 
-      {/* ── 2. BALANCED DARK GRADIENT OVERLAY FOR READABILITY ── */}
       <div
         className="absolute inset-0 pointer-events-none z-10"
         style={{
@@ -123,11 +121,9 @@ export default function HeroSlider() {
         }}
       />
 
-      {/* ── 3. SIMPLE 1-2 LINE CENTERED TEXT CONTENT ── */}
       <div className="container-custom relative z-20 h-full flex flex-col items-center justify-center text-center px-4">
         <div className="max-w-3xl mx-auto space-y-4">
-          
-          {/* Line 1: Main Headline */}
+
           <h1
             key={`title-${current}`}
             className="text-2xl sm:text-4xl md:text-5xl lg:text-[52px] font-black text-white tracking-tight leading-[1.15] drop-shadow-md animate-fade-in"
@@ -135,7 +131,6 @@ export default function HeroSlider() {
             {slide.headline}
           </h1>
 
-          {/* Line 2: 1-Line Concise Subtitle */}
           <p
             key={`sub-${current}`}
             className="text-sm sm:text-base md:text-lg text-slate-200 font-normal leading-relaxed max-w-2xl mx-auto drop-shadow animate-fade-in"
@@ -143,7 +138,6 @@ export default function HeroSlider() {
             {slide.subline}
           </p>
 
-          {/* Clean Action Buttons */}
           <div className="pt-4 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
             <Link
               to={slide.primaryLink}
@@ -164,11 +158,9 @@ export default function HeroSlider() {
         </div>
       </div>
 
-      {/* ── 4. MINIMALIST SLIDER CONTROLS (DOTS & ARROWS) ── */}
       <div className="absolute bottom-5 left-0 right-0 z-30">
         <div className="container-custom flex items-center justify-between px-4">
-          
-          {/* Slide Dots */}
+
           <div className="flex items-center gap-2">
             {slides.map((_, idx) => (
               <button
@@ -185,7 +177,6 @@ export default function HeroSlider() {
             ))}
           </div>
 
-          {/* Prev / Next Minimalist Arrows */}
           <div className="flex items-center gap-2">
             <button
               type="button"

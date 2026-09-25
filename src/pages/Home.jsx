@@ -45,7 +45,6 @@ export default function Home() {
     "Hello GreenTech Solutions! I would like to request a quotation for your industrial products."
   );
 
-  /* ── 1. AUTHENTIC FEATURED PRODUCTS (8 BALANCED ITEMS) ── */
   const featuredProducts = [
     {
       id: "top-discharge-air-cooler",
@@ -150,7 +149,6 @@ export default function Home() {
       ? featuredProducts
       : featuredProducts.filter((p) => p.category === activeTab);
 
-  /* ── 2. REAL VERIFIED CLIENTS FROM BROCHURE IMAGE 2 ── */
   const brochureClients = [
     { name: "Mangla Textiles", sector: "Textile Mill", badge: "Textiles" },
     { name: "Roto Pumps Ltd", sector: "Fluid Engineering", badge: "Pumps (Since 1968)" },
@@ -171,19 +169,12 @@ export default function Home() {
 
   return (
     <div className="bg-[#FFFFFF] text-[#17212B] min-h-screen">
-      
-      {/* ══════════════════════════════════════════════════
-          1. FULL-WIDTH AUTO-SLIDING HERO BANNER
-      ══════════════════════════════════════════════════ */}
+
       <HeroSlider />
 
-      {/* ══════════════════════════════════════════════════
-          2. PRODUCT CATEGORY SHOWCASE ("Industrial Solutions for Every Workspace")
-      ══════════════════════════════════════════════════ */}
       <section className="py-16 sm:py-24 bg-[#FAFDFB] border-b border-slate-200">
         <div className="container-custom px-4">
-          
-          {/* Centered Section Header */}
+
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
             <div className="inline-flex items-center gap-2 rounded-full bg-[#009B4D]/10 border border-[#009B4D]/25 px-3.5 py-1 text-xs font-black text-[#009B4D] uppercase tracking-widest mb-3">
               <span className="w-1.5 h-1.5 rounded-full bg-[#009B4D] animate-pulse" />
@@ -197,12 +188,10 @@ export default function Home() {
             </p>
           </div>
 
-          {/* 4 Cards Grid - Clean, Balanced & Minimal upfront details */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            
-            {/* ── CARD 1: INDUSTRIAL AIR COOLERS ── */}
+
             <div className="group rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#009B4D] transition-all duration-300 flex flex-col overflow-hidden">
-              {/* Image Container with Badge */}
+
               <div className="relative aspect-[4/3] bg-slate-50 overflow-hidden p-4 border-b border-slate-100">
                 <span className="absolute top-3 left-3 z-10 rounded-full bg-[#009B4D] text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 shadow-sm">
                   Up to 80% Power Saving
@@ -214,7 +203,6 @@ export default function Home() {
                 />
               </div>
 
-              {/* Body */}
               <div className="p-6 flex flex-col flex-1">
                 <div className="flex items-center gap-2 text-xs font-bold text-[#009B4D] uppercase tracking-wider mb-1">
                   <Wind size={15} />
@@ -229,7 +217,6 @@ export default function Home() {
                   High-capacity ductable evaporative coolers (0.75kW – 4.5kW) delivering 100% fresh, dust-filtered air to factory floors and warehouses.
                 </p>
 
-                {/* View More Button */}
                 <div className="mt-auto pt-4 border-t border-slate-100">
                   <Link
                     to="/products?category=air-coolers"
@@ -242,9 +229,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* ── CARD 2: INDUSTRIAL EXHAUST FANS ── */}
             <div className="group rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#009B4D] transition-all duration-300 flex flex-col overflow-hidden">
-              {/* Image Container with Badge */}
+
               <div className="relative aspect-[4/3] bg-slate-50 overflow-hidden p-4 border-b border-slate-100">
                 <span className="absolute top-3 left-3 z-10 rounded-full bg-[#142D4E] text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 shadow-sm">
                   Heavy Ventilation
@@ -256,7 +242,6 @@ export default function Home() {
                 />
               </div>
 
-              {/* Body */}
               <div className="p-6 flex flex-col flex-1">
                 <div className="flex items-center gap-2 text-xs font-bold text-[#009B4D] uppercase tracking-wider mb-1">
                   <Gauge size={15} />
@@ -271,7 +256,6 @@ export default function Home() {
                   Direct drive, belt drive, and fibercone exhaust systems engineered for rapid evacuation of smoke, high heat, and industrial fumes.
                 </p>
 
-                {/* View More Button */}
                 <div className="mt-auto pt-4 border-t border-slate-100">
                   <Link
                     to="/products?category=exhaust-fans"
@@ -284,9 +268,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* ── CARD 3: INDUSTRIAL LIGHTING ── */}
             <div className="group rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#009B4D] transition-all duration-300 flex flex-col overflow-hidden">
-              {/* Image Container with Badge */}
+
               <div className="relative aspect-[4/3] bg-slate-50 overflow-hidden p-4 border-b border-slate-100">
                 <span className="absolute top-3 left-3 z-10 rounded-full bg-amber-600 text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 shadow-sm">
                   140+ Lumens / Watt
@@ -298,7 +281,6 @@ export default function Home() {
                 />
               </div>
 
-              {/* Body */}
               <div className="p-6 flex flex-col flex-1">
                 <div className="flex items-center gap-2 text-xs font-bold text-[#009B4D] uppercase tracking-wider mb-1">
                   <Lightbulb size={15} />
@@ -313,7 +295,6 @@ export default function Home() {
                   High-bay UFO LEDs and IP65 flood/street lights with 6kV surge suppression built for high-ceiling industrial sheds and warehouses.
                 </p>
 
-                {/* View More Button */}
                 <div className="mt-auto pt-4 border-t border-slate-100">
                   <Link
                     to="/products?category=industrial-lights"
@@ -326,9 +307,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* ── CARD 4: FACTORY & GARMENT FURNITURE ── */}
             <div className="group rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#009B4D] transition-all duration-300 flex flex-col overflow-hidden">
-              {/* Image Container with Badge */}
+
               <div className="relative aspect-[4/3] bg-slate-50 overflow-hidden p-4 border-b border-slate-100">
                 <span className="absolute top-3 left-3 z-10 rounded-full bg-slate-800 text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 shadow-sm">
                   Prime CRCA Steel
@@ -340,7 +320,6 @@ export default function Home() {
                 />
               </div>
 
-              {/* Body */}
               <div className="p-6 flex flex-col flex-1">
                 <div className="flex items-center gap-2 text-xs font-bold text-[#009B4D] uppercase tracking-wider mb-1">
                   <Package size={15} />
@@ -355,7 +334,6 @@ export default function Home() {
                   Heavy-gauge prime steel fabric cutting tables, multi-tier pallet storage racks, garment movement trolleys, and industrial almirahs.
                 </p>
 
-                {/* View More Button */}
                 <div className="mt-auto pt-4 border-t border-slate-100">
                   <Link
                     to="/products?category=furniture-storage"
@@ -370,7 +348,6 @@ export default function Home() {
 
           </div>
 
-          {/* Quick Industrial Benefit Bar Below Categories */}
           <div className="mt-12 rounded-2xl bg-white border border-slate-200 p-6 shadow-xs">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="flex items-center gap-3">
@@ -418,13 +395,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════════════
-          3. FEATURED PRODUCTS SHOWCASE (AUTHENTIC BROCHURE SPECIFICATIONS)
-      ══════════════════════════════════════════════════ */}
       <section className="py-16 sm:py-24 bg-white border-b border-slate-200">
         <div className="container-custom px-4">
-          
-          {/* Centered Section Header */}
+
           <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
             <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#009B4D] bg-[#009B4D]/10 px-4 py-1.5 rounded-full mb-3">
               <ShieldCheck size={14} className="text-[#009B4D]" />
@@ -437,7 +410,6 @@ export default function Home() {
               Explore our heavy-duty ductable coolers, high-velocity exhaust ventilation, commercial LED lights, and factory storage solutions.
             </p>
 
-            {/* Centered Category Filter Tabs */}
             <div className="flex flex-wrap items-center justify-center gap-2 mt-8">
               {[
                 { id: "all", label: "All Items", count: featuredProducts.length },
@@ -471,7 +443,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Product Cards Grid: 4 columns on desktop, 2 on tablet, 1 on mobile */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {filteredProducts.map((prod) => {
               const waQuote = encodeURIComponent(
@@ -482,7 +453,7 @@ export default function Home() {
                   key={prod.id}
                   className="rounded-2xl bg-white border border-slate-200 p-4 sm:p-5 shadow-xs hover:shadow-xl hover:border-[#009B4D] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
                 >
-                  {/* Top Badge */}
+
                   <div className="absolute top-3 left-3 z-10">
                     <span className="rounded-full bg-[#009B4D] px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider text-white shadow-sm">
                       {prod.badge || "Verified"}
@@ -490,22 +461,20 @@ export default function Home() {
                   </div>
 
                   <div>
-                    {/* Image Box */}
                     <Link
                       to={prod.link}
-                      className="aspect-[4/3] rounded-xl bg-slate-50 border border-slate-100 p-3 flex items-center justify-center overflow-hidden mb-4 group-hover:bg-emerald-50/20 transition-colors block"
+                      className="aspect-[4/3] w-full rounded-xl bg-gradient-to-b from-slate-50 to-white border border-slate-100 p-2.5 flex items-center justify-center overflow-hidden mb-4 group-hover:border-[#009B4D]/30 transition-colors block relative"
                     >
                       <img
                         src={prod.image}
                         alt={prod.name}
-                        className="max-h-full max-w-full object-contain group-hover:scale-108 transition-transform duration-500"
+                        className="h-full w-full object-contain object-center group-hover:scale-105 transition-transform duration-500"
                         onError={(e) => {
                           e.currentTarget.src = "/images/coolers/category-air-coolers.jpg";
                         }}
                       />
                     </Link>
 
-                    {/* Category & Star Rating */}
                     <div className="flex items-center justify-between gap-2 mb-1.5">
                       <span className="text-[11px] font-bold text-[#009B4D] uppercase tracking-wider">
                         {prod.categoryName}
@@ -516,17 +485,14 @@ export default function Home() {
                       </div>
                     </div>
 
-                    {/* Product Name */}
                     <h3 className="text-sm sm:text-base font-bold text-[#142D4E] group-hover:text-[#009B4D] transition-colors leading-snug line-clamp-2">
                       <Link to={prod.link}>{prod.name}</Link>
                     </h3>
 
-                    {/* Model Code */}
                     <p className="text-[11px] font-mono font-semibold text-slate-500 mt-1">
                       {prod.model}
                     </p>
 
-                    {/* Specs Bullet List */}
                     <div className="mt-3 pt-3 border-t border-slate-100 space-y-1">
                       {prod.specs.slice(0, 2).map((sp, sIdx) => (
                         <div
@@ -540,7 +506,6 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {/* Pricing / Supply & Actions */}
                   <div className="mt-4 pt-3 border-t border-slate-100">
                     <div className="flex items-center justify-between mb-3 text-[11px]">
                       <span className="text-slate-500 font-medium">Wholesale Supply</span>
@@ -572,7 +537,6 @@ export default function Home() {
             })}
           </div>
 
-          {/* Bottom CTA to /products */}
           <div className="text-center mt-12">
             <Link
               to="/products"
@@ -586,19 +550,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════════════
-          4. LIVE PRODUCT & MANUFACTURING VIDEO SHOWCASE
-      ══════════════════════════════════════════════════ */}
       <ProductVideoShowcase />
 
-      {/* ══════════════════════════════════════════════════
-          5. ABOUT GREENTECH PREVIEW (TWO-COLUMN ARCHITECTURAL COMPOSITION)
-      ══════════════════════════════════════════════════ */}
       <section className="py-16 sm:py-24 bg-[#F5F7F6] border-b border-slate-200">
         <div className="container-custom px-4">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            
-            {/* Left Photo Composition */}
+
             <div className="lg:col-span-5">
               <div className="relative rounded-3xl overflow-hidden border-2 border-slate-200 shadow-xl bg-slate-900 group">
                 <img
@@ -622,7 +579,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Content */}
             <div className="lg:col-span-7 space-y-5">
               <div className="inline-flex items-center gap-2 rounded-md bg-[#009B4D]/10 px-3 py-1 text-xs font-bold text-[#009B4D] uppercase tracking-wider">
                 <Building2 size={13} />
@@ -641,7 +597,6 @@ export default function Home() {
                 Industrial air coolers make big spaces comfortable by continuously replacing trapped heat and stale air with fresh, dust-filtered cooled air. We assist factory owners and plant engineers in choosing the exact top discharge, down position, or ductable cooler model matched to their floor area and heat load.
               </p>
 
-              {/* 4 Practical Pillars from Brochure */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
                 <div className="flex items-start gap-2.5 p-3.5 rounded-2xl bg-white border border-slate-200">
                   <CheckCircle2 size={18} className="text-[#009B4D] shrink-0 mt-0.5" />
@@ -692,12 +647,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════════════
-          5. INDUSTRIES WE SERVE (IMAGE-LED PRACTICAL WORKSPACES)
-      ══════════════════════════════════════════════════ */}
       <section className="py-16 sm:py-24 bg-white border-b border-slate-200">
         <div className="container-custom px-4">
-          
+
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#009B4D] bg-[#009B4D]/10 px-3 py-1 rounded-md">
@@ -711,14 +663,13 @@ export default function Home() {
               to="/industries"
               className="inline-flex items-center gap-2 text-sm font-bold text-[#009B4D] hover:underline"
             >
-              <span>Explore All 4 Industry Sectors</span>
+              <span>Explore Industry Sectors</span>
               <ArrowRight size={16} />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            
-            {/* Industry 1: Garments */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
             <div className="rounded-3xl bg-slate-50 border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-[#009B4D] transition-all flex flex-col justify-between group">
               <div>
                 <div className="h-44 overflow-hidden relative">
@@ -751,7 +702,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Industry 2: Heavy Manufacturing */}
             <div className="rounded-3xl bg-slate-50 border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-[#009B4D] transition-all flex flex-col justify-between group">
               <div>
                 <div className="h-44 overflow-hidden relative">
@@ -784,7 +734,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Industry 3: Warehouses */}
             <div className="rounded-3xl bg-slate-50 border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-[#009B4D] transition-all flex flex-col justify-between group">
               <div>
                 <div className="h-44 overflow-hidden relative">
@@ -817,50 +766,14 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Industry 4: Workshops */}
-            <div className="rounded-3xl bg-slate-50 border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-[#009B4D] transition-all flex flex-col justify-between group">
-              <div>
-                <div className="h-44 overflow-hidden relative">
-                  <img
-                    src="/images/factory/industrial-outdoor-unit.jpg"
-                    alt="Workshops & Assembly Lines"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute top-3 left-3 bg-[#142D4E]/80 backdrop-blur-sm text-white p-2 rounded-xl">
-                    <Wrench size={18} />
-                  </div>
-                </div>
-                <div className="p-5">
-                  <h3 className="font-black text-slate-900 text-base group-hover:text-[#009B4D] transition-colors">
-                    Workshops & Assembly Lines
-                  </h3>
-                  <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                    Flexible zone cooling, lockable industrial tool storage cabinets, and commercial task lighting.
-                  </p>
-                </div>
-              </div>
-              <div className="p-5 pt-0">
-                <Link
-                  to="/industries"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#009B4D] group-hover:underline"
-                >
-                  <span>Learn Application</span>
-                  <ArrowRight size={13} />
-                </Link>
-              </div>
-            </div>
-
           </div>
 
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════════════
-          6. WHY CHOOSE GREENTECH (SUPPORTED BY VERIFIED INFORMATION)
-      ══════════════════════════════════════════════════ */}
       <section className="py-16 sm:py-24 bg-[#F5F7F6] border-b border-slate-200">
         <div className="container-custom px-4">
-          
+
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-xs font-bold uppercase tracking-widest text-[#009B4D] bg-[#009B4D]/10 px-3 py-1 rounded-md">
               Reliable Industrial Partnership
@@ -874,8 +787,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            
-            {/* 1. Multiple Product Categories */}
+
             <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm">
               <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-[#009B4D] flex items-center justify-center mb-4">
                 <Layers size={24} />
@@ -888,7 +800,6 @@ export default function Home() {
               </p>
             </div>
 
-            {/* 2. Workspace Options */}
             <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm">
               <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-[#009B4D] flex items-center justify-center mb-4">
                 <Wrench size={24} />
@@ -901,7 +812,6 @@ export default function Home() {
               </p>
             </div>
 
-            {/* 3. Specification Support */}
             <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm">
               <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-[#009B4D] flex items-center justify-center mb-4">
                 <ShieldCheck size={24} />
@@ -914,7 +824,6 @@ export default function Home() {
               </p>
             </div>
 
-            {/* 4. Prompt Assistance */}
             <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm">
               <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-[#009B4D] flex items-center justify-center mb-4">
                 <PhoneCall size={24} />
@@ -932,12 +841,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════════════
-          7. AUTHENTIC CLIENT SHOWCASE ("Our Valued Clients")
-      ══════════════════════════════════════════════════ */}
       <section className="py-16 sm:py-24 bg-white border-b border-slate-200">
         <div className="container-custom px-4 mb-8">
-          
+
           <div className="text-center max-w-2xl mx-auto">
             <div className="inline-flex items-center gap-2 rounded-full bg-[#009B4D]/10 border border-[#009B4D]/25 px-3.5 py-1 text-xs font-black text-[#009B4D] uppercase tracking-widest mb-3">
               <span className="w-1.5 h-1.5 rounded-full bg-[#009B4D] animate-pulse" />
@@ -953,19 +859,15 @@ export default function Home() {
 
         </div>
 
-        {/* ── CONTINUOUS LOGO AUTO-SLIDER (ONLY LOGOS EXTRACTED FROM BROCHURE) ── */}
         <ClientLogoSlider />
       </section>
 
-      {/* ══════════════════════════════════════════════════
-          8. CALL TO ACTION (CLEAN INDUSTRIAL AESTHETIC WITH CRISP ACCENTS)
-      ══════════════════════════════════════════════════ */}
       <section className="py-14 sm:py-20 bg-[#FAFDFB]">
         <div className="container-custom px-4">
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-b from-white via-slate-50 to-emerald-50/30 p-8 sm:p-14 lg:p-16 shadow-xl border border-slate-200/90 text-center max-w-4xl mx-auto">
-            
+
             <div className="relative z-10 max-w-2xl mx-auto space-y-4">
-              
+
               <div className="inline-flex items-center gap-2 rounded-full bg-[#009B4D]/10 border border-[#009B4D]/25 text-[#009B4D] px-4 py-1.5 text-xs font-bold uppercase tracking-wider shadow-2xs">
                 <CheckCircle2 size={13} className="text-[#009B4D]" />
                 <span>Get Factory Direct Pricing</span>
@@ -1008,4 +910,3 @@ export default function Home() {
     </div>
   );
 }
-

@@ -1,4 +1,3 @@
-// Smart product image with seamless fallback to actual category imagery
 
 const categoryFallbacks = {
   "air-coolers": "/images/coolers/category-air-coolers.jpg",

@@ -71,7 +71,7 @@ export default function ProductDetails() {
 
   return (
     <>
-      {/* Breadcrumb */}
+
       <Breadcrumb
         items={[
           { label: "Home", href: "/" },
@@ -80,13 +80,12 @@ export default function ProductDetails() {
         ]}
       />
 
-      {/* ===================== PRODUCT DETAIL ===================== */}
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Left – Images */}
+
             <div>
-              {/* Main Image */}
+
               <div className="rounded-2xl overflow-hidden shadow-card border border-slate-200 mb-4 bg-slate-50 flex items-center justify-center">
                 <ProductImage
                   src={gallery[activeImage]}
@@ -97,7 +96,7 @@ export default function ProductDetails() {
                   imgClassName="object-contain p-4"
                 />
               </div>
-              {/* Thumbnails */}
+
               {gallery.length > 1 && (
                 <div className="flex gap-3 flex-wrap">
                   {gallery.map((img, idx) => (
@@ -121,9 +120,8 @@ export default function ProductDetails() {
               )}
             </div>
 
-            {/* Right – Info */}
             <div>
-              {/* Category tag */}
+
               <span className="inline-block badge-green mb-3">{product.categoryName}</span>
               {product.badge && (
                 <span className="inline-block badge bg-primary/10 text-primary ml-2 mb-3">{product.badge}</span>
@@ -135,7 +133,6 @@ export default function ProductDetails() {
 
               <p className="text-gray-600 leading-relaxed mb-6">{product.description}</p>
 
-              {/* Features */}
               {product.features && (
                 <div className="mb-6">
                   <h3 className="font-bold text-navy text-sm uppercase tracking-wide mb-3">Key Features</h3>
@@ -150,7 +147,6 @@ export default function ProductDetails() {
                 </div>
               )}
 
-              {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-3 mb-6">
                 <Link
                   to={`/contact?product=${encodeURIComponent(product.name)}`}
@@ -172,7 +168,6 @@ export default function ProductDetails() {
                 </a>
               </div>
 
-              {/* Contact info */}
               <div className="bg-[#FAFDFB] rounded-xl p-4 border border-slate-200">
                 <div className="flex items-center gap-2 text-xs sm:text-sm text-[#142D4E]">
                   <Phone size={14} className="text-[#009B4D]" />
@@ -187,7 +182,6 @@ export default function ProductDetails() {
         </div>
       </section>
 
-      {/* ===================== SPECS TABLE ===================== */}
       {product.specs ? (
         <section className="py-14 bg-graybg">
           <div className="container-custom">
@@ -244,7 +238,6 @@ export default function ProductDetails() {
         </section>
       )}
 
-      {/* ===================== BENEFITS ===================== */}
       {product.benefits && product.benefits.length > 0 && (
         <section className="py-14 bg-white">
           <div className="container-custom">
@@ -261,7 +254,6 @@ export default function ProductDetails() {
         </section>
       )}
 
-      {/* ===================== RELATED PRODUCTS ===================== */}
       {relatedProducts.length > 0 && (
         <section className="section-padding bg-graybg">
           <div className="container-custom">
@@ -285,7 +277,6 @@ export default function ProductDetails() {
         </section>
       )}
 
-      {/* ===================== ENQUIRY CTA ===================== */}
       <section className="py-16 bg-gradient-to-r from-navy to-darkgreen">
         <div className="container-custom text-center">
           <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-4">

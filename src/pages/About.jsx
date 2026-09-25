@@ -55,10 +55,9 @@ export default function About() {
 
   return (
     <div className="bg-[#FAFDFB] text-[#17212B]">
-      
-      {/* ── 1. EDITORIAL PAGE HERO ── */}
+
       <section className="relative bg-gradient-to-br from-[#0B1726] via-[#142D4E] to-[#0B1726] text-white py-14 sm:py-20 overflow-hidden">
-        {/* Subtle engineering grid */}
+
         <div
           className="absolute inset-0 opacity-[0.04] pointer-events-none"
           style={{
@@ -68,7 +67,7 @@ export default function About() {
         />
 
         <div className="container-custom relative z-10">
-          {/* Breadcrumb */}
+
           <div className="flex items-center gap-2 text-xs font-semibold text-emerald-400 mb-6">
             <Link to="/" className="hover:text-white transition-colors">
               Home
@@ -96,7 +95,6 @@ export default function About() {
                 Founded in Sector-121 Noida, GreenTech Solutions manufactures and delivers high-performance ductable evaporative coolers, direct-drive exhaust fans, commercial UFO LED lighting, and prime steel factory furniture built for continuous operation across Indian manufacturing plants.
               </p>
 
-              {/* Action Buttons */}
               <div className="mt-6 flex flex-wrap items-center gap-3">
                 <Link
                   to="/products"
@@ -113,7 +111,6 @@ export default function About() {
                 </Link>
               </div>
 
-              {/* Verified Badges */}
               <div className="mt-8 pt-6 border-t border-white/10 flex flex-wrap gap-3 sm:gap-4 text-xs font-semibold text-slate-200">
                 <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl px-3.5 py-2">
                   <FileCheck size={16} className="text-[#009B4D]" />
@@ -130,7 +127,6 @@ export default function About() {
               </div>
             </div>
 
-            {/* Right Side Industrial Facility Visual */}
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-3xl overflow-hidden border border-white/15 shadow-2xl bg-slate-900 group">
                 <img
@@ -158,12 +154,10 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── 2. COMPANY INTRODUCTION & VERIFIED PILLARS ── */}
       <section className="py-16 sm:py-20 bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            {/* Left Column: Intro */}
+
             <div className="lg:col-span-7">
               <span className="text-xs font-black uppercase tracking-widest text-[#009B4D]">
                 Who We Are
@@ -184,7 +178,6 @@ export default function About() {
                 </p>
               </div>
 
-              {/* 4 Core Brochure Pillars */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
                 <div className="flex items-start gap-3 p-4 rounded-xl bg-slate-50 border border-slate-200">
                   <CheckCircle2 size={18} className="text-[#009B4D] shrink-0 mt-0.5" />
@@ -220,9 +213,8 @@ export default function About() {
               </div>
             </div>
 
-            {/* Right Column: Factory & Equipment Showcase */}
             <div className="lg:col-span-5 space-y-4">
-              {/* Featured: Exhaust & Ventilation */}
+
               <div className="group relative rounded-3xl overflow-hidden border border-slate-200/90 shadow-md bg-white hover:shadow-xl transition-all duration-300">
                 <div className="relative h-56 sm:h-64 w-full overflow-hidden bg-slate-900">
                   <img
@@ -247,10 +239,8 @@ export default function About() {
                 </div>
               </div>
 
-              {/* 2 Symmetrical Cards: Air Cooler Fabrication & Fibercone Exhaust Fan */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                
-                {/* 1. Air Cooler Fabrication */}
+
                 <div className="group rounded-2xl bg-white border border-slate-200/90 p-4 shadow-sm hover:shadow-md hover:border-[#009B4D] transition-all flex flex-col">
                   <div className="relative aspect-[4/3] rounded-xl bg-slate-50 overflow-hidden p-2 mb-3 border border-slate-100 flex items-center justify-center">
                     <span className="absolute top-2 left-2 z-10 rounded-full bg-[#009B4D] text-white text-[9px] font-extrabold uppercase px-2 py-0.5 shadow-xs">
@@ -270,7 +260,6 @@ export default function About() {
                   </p>
                 </div>
 
-                {/* 2. Fibercone Exhaust Fan */}
                 <div className="group rounded-2xl bg-white border border-slate-200/90 p-4 shadow-sm hover:shadow-md hover:border-[#009B4D] transition-all flex flex-col">
                   <div className="relative aspect-[4/3] rounded-xl bg-slate-50 overflow-hidden p-2 mb-3 border border-slate-100 flex items-center justify-center">
                     <span className="absolute top-2 left-2 z-10 rounded-full bg-[#142D4E] text-white text-[9px] font-extrabold uppercase px-2 py-0.5 shadow-xs">
@@ -297,11 +286,9 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── 3. LEADERSHIP & CO-FOUNDER SPOTLIGHT ── */}
       <section className="py-14 sm:py-20 bg-gradient-to-b from-[#F7FAF8] via-white to-[#F7FAF8] border-y border-slate-200">
         <div className="container-custom">
-          
-          {/* Section Header */}
+
           <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
             <span className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-[#009B4D] bg-[#009B4D]/10 px-3.5 py-1.5 rounded-full">
               <UserCheck size={14} className="text-[#009B4D]" /> Company Leadership
@@ -314,11 +301,9 @@ export default function About() {
             </p>
           </div>
 
-          {/* Executive Profile Card */}
           <div className="max-w-4xl mx-auto bg-white rounded-3xl border border-slate-200/90 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-12 items-center">
-              
-              {/* Left Column: Portrait */}
+
               <div className="md:col-span-5 bg-gradient-to-br from-slate-50 via-emerald-50/30 to-slate-100 p-6 sm:p-8 flex flex-col items-center justify-center text-center border-b md:border-b-0 md:border-r border-slate-100 self-stretch">
                 <div className="relative w-52 h-52 sm:w-60 sm:h-60 rounded-2xl overflow-hidden shadow-lg border-2 border-white ring-4 ring-emerald-500/10 group bg-slate-200">
                   <img
@@ -338,10 +323,8 @@ export default function About() {
                 </div>
               </div>
 
-              {/* Right Column: Bio, Contact & Actions */}
               <div className="md:col-span-7 p-6 sm:p-8 lg:p-10 flex flex-col justify-between space-y-6">
-                
-                {/* Name & Title */}
+
                 <div>
                   <div className="flex items-center gap-2 text-xs font-bold text-[#009B4D] uppercase tracking-wider mb-1.5">
                     <Briefcase size={14} /> Executive Leadership
@@ -352,16 +335,14 @@ export default function About() {
                   <p className="text-sm font-bold text-emerald-700 mt-0.5">
                     Co-Founder • GreenTech Solutions
                   </p>
-                  
+
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mt-3.5 italic bg-slate-50 p-3.5 rounded-xl border border-slate-100">
                     &ldquo;Our commitment is to manufacture durable, energy-saving industrial air coolers, ventilation fans, and workshop infrastructure engineered specifically for grueling Indian factory environments.&rdquo;
                   </p>
                 </div>
 
-                {/* Direct Contact Cards */}
                 <div className="space-y-3">
-                  
-                  {/* Phone & WhatsApp Card */}
+
                   <div className="p-4 rounded-2xl bg-emerald-50/70 border border-emerald-200/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-xl bg-[#009B4D] text-white flex items-center justify-center shrink-0 shadow-xs">
@@ -380,7 +361,6 @@ export default function About() {
                       </div>
                     </div>
 
-                    {/* Action buttons */}
                     <div className="flex items-center gap-2 shrink-0">
                       <a
                         href="https://wa.me/919336373719?text=Hello%20Mr.%20Ashok%20Kumar%20Satsangi,%20I%20would%20like%20to%20connect%20with%20GreenTech%20Solutions."
@@ -401,7 +381,6 @@ export default function About() {
                     </div>
                   </div>
 
-                  {/* Direct Email Card */}
                   <a
                     href="mailto:greentech_solutions02@outlook.com"
                     className="p-3.5 rounded-2xl bg-slate-50 hover:bg-slate-100 border border-slate-200/80 transition-all flex items-center gap-3 group"
@@ -419,7 +398,6 @@ export default function About() {
                     </div>
                   </a>
 
-                  {/* Office & GSTIN Meta */}
                   <div className="pt-2 flex flex-wrap items-center gap-3 text-[11px] text-slate-500">
                     <span className="flex items-center gap-1">
                       <MapPin size={13} className="text-[#009B4D]" /> Office No-7, Yadu Market, Sector-121 Noida
@@ -440,7 +418,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── 4. WHAT GREENTECH OFFERS — 4 CORE CATEGORIES ── */}
       <section className="py-16 bg-[#F5F7F6] border-y border-slate-200">
         <div className="container-custom">
           <div className="max-w-3xl mb-12">
@@ -456,8 +433,7 @@ export default function About() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            
-            {/* Category 1 */}
+
             <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col">
               <div className="w-12 h-12 rounded-xl bg-emerald-50 text-[#009B4D] flex items-center justify-center mb-4">
                 <Wind size={24} />
@@ -475,7 +451,6 @@ export default function About() {
               </Link>
             </div>
 
-            {/* Category 2 */}
             <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col">
               <div className="w-12 h-12 rounded-xl bg-blue-50 text-[#142D4E] flex items-center justify-center mb-4">
                 <Gauge size={24} />
@@ -493,7 +468,6 @@ export default function About() {
               </Link>
             </div>
 
-            {/* Category 3 */}
             <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col">
               <div className="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-4">
                 <Lightbulb size={24} />
@@ -511,7 +485,6 @@ export default function About() {
               </Link>
             </div>
 
-            {/* Category 4 */}
             <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col">
               <div className="w-12 h-12 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center mb-4">
                 <Package size={24} />
@@ -533,11 +506,10 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── 4. INDUSTRIAL APPLICATIONS ── */}
       <section className="py-16 bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            
+
             <div className="lg:col-span-5">
               <span className="text-xs font-black uppercase tracking-widest text-[#009B4D]">
                 Applications
@@ -592,7 +564,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── 5. AUTHENTIC CLIENTS SHOWCASE ── */}
       <section className="py-16 bg-[#F5F7F6] border-t border-slate-200">
         <div className="container-custom">
           <div className="text-center max-w-2xl mx-auto mb-10">
@@ -607,7 +578,6 @@ export default function About() {
             </p>
           </div>
 
-          {/* Clean Logos & Company Names Grid (NO BROCHURE BANNER IMAGE) */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3.5 max-w-5xl mx-auto">
             {clientLogos.map((client) => (
               <div
@@ -638,7 +608,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── 6. STRONG ENQUIRY CALL TO ACTION ── */}
       <section className="py-14 sm:py-20 bg-[#FAFDFB]">
         <div className="container-custom px-4">
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#062B18] via-[#006331] to-[#009B4D] text-white p-8 sm:p-14 lg:p-16 shadow-2xl border border-emerald-500/30 text-center max-w-5xl mx-auto">

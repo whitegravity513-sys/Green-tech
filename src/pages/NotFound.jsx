@@ -5,7 +5,7 @@ export default function NotFound() {
   return (
     <div className="min-h-[70vh] flex flex-col items-center justify-center text-center px-4 bg-graybg">
       <div className="bg-white rounded-3xl shadow-card p-12 max-w-md w-full">
-        {/* 404 Visual */}
+
         <div className="mb-6">
           <div className="text-8xl font-extrabold text-primary/20 leading-none select-none">404</div>
           <div className="text-4xl mt-2">🏭</div>

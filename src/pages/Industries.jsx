@@ -67,22 +67,6 @@ const industriesData = [
     ],
     tag: "Large Volume Ventilation",
   },
-  {
-    id: "workshops-production",
-    title: "Workshops & Assembly Lines",
-    icon: Wrench,
-    image: "/images/factory/industrial-outdoor-unit.jpg",
-    problem:
-      "Compact assembly lines and repair workshops need cost-effective cooling and flexible storage without expensive central air conditioning infrastructure.",
-    solution:
-      "Top discharge and mobile coolers supply 100% fresh cooled air at 80% lower electricity consumption compared to central chillers, supported by lockable tool storage cabinets.",
-    recommendedProducts: [
-      { name: "Top Discharge Air Coolers", link: "/products?category=air-coolers" },
-      { name: "Industrial Storage Cabinets", link: "/products?category=furniture-storage" },
-      { name: "Commercial LED Flood Lights", link: "/products?category=industrial-lights" },
-    ],
-    tag: "Targeted Zone Cooling",
-  },
 ];
 
 export default function Industries() {
@@ -93,7 +77,7 @@ export default function Industries() {
 
   return (
     <div className="bg-[#FAFDFB] text-[#17212B] min-h-screen">
-      {/* ── HERO BANNER ── */}
+
       <section className="relative bg-[#142D4E] text-white py-16 md:py-24 px-4 overflow-hidden">
         <div
           className="absolute inset-0 opacity-15 pointer-events-none"
@@ -116,7 +100,6 @@ export default function Industries() {
         </div>
       </section>
 
-      {/* ── INDUSTRIES SHOWCASE ── */}
       <section className="py-16 md:py-20">
         <div className="container-custom px-4">
           <div className="space-y-16">
@@ -130,7 +113,7 @@ export default function Industries() {
                     isReversed ? "lg:flex-row-reverse" : ""
                   }`}
                 >
-                  {/* Photo Column */}
+
                   <div
                     className={`lg:col-span-6 ${
                       isReversed ? "lg:order-2" : "lg:order-1"
@@ -154,7 +137,6 @@ export default function Industries() {
                     </div>
                   </div>
 
-                  {/* Text Column */}
                   <div
                     className={`lg:col-span-6 space-y-5 ${
                       isReversed ? "lg:order-1" : "lg:order-2"
@@ -187,7 +169,6 @@ export default function Industries() {
                       </div>
                     </div>
 
-                    {/* Recommended Products */}
                     <div>
                       <span className="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-2">
                         Relevant GreenTech Categories:
@@ -213,7 +194,6 @@ export default function Industries() {
         </div>
       </section>
 
-      {/* ── CTA BANNER ── */}
       <section className="py-16 bg-[#142D4E] text-white">
         <div className="container-custom px-4 text-center max-w-3xl mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-white">
