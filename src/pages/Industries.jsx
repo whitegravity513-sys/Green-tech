@@ -23,7 +23,7 @@ const industriesData = [
     id: "garment-textile",
     title: "Garment & Textile Manufacturing",
     icon: Shirt,
-    image: "/images/factory/about-factory.jpg",
+    image: "/images/industries/industry-garment-textile.jpg",
     problem:
       "High worker density, heat from fabric pressing equipment, and airborne cotton dust require continuous fresh air exchange without drying out delicate threads.",
     solution:
@@ -39,7 +39,7 @@ const industriesData = [
     id: "industrial-manufacturing",
     title: "Heavy Manufacturing & Engineering",
     icon: Factory,
-    image: "/images/factory/strengths-industrial.jpg",
+    image: "/images/industries/industry-heavy-manufacturing.jpg",
     problem:
       "CNC machining, injection moulding, metal fabrication, and welding generate massive localized heat loads and metal fumes that quickly exceed ambient limits.",
     solution:
@@ -55,7 +55,7 @@ const industriesData = [
     id: "warehousing-storage",
     title: "Warehousing & Logistics Centers",
     icon: Warehouse,
-    image: "/images/factory/hero-industrial-cooler.jpg",
+    image: "/images/industries/industry-warehouse-logistics.jpg",
     problem:
       "High-ceiling warehouses trap heat in summer, creating unbearable temperatures near racking levels, while vast floor areas require efficient illumination.",
     solution:

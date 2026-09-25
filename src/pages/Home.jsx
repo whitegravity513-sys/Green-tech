@@ -25,6 +25,7 @@ import HeroSlider from "../components/HeroSlider";
 import ClientLogoSlider from "../components/ClientLogoSlider";
 import ProductVideoShowcase from "../components/ProductVideoShowcase";
 import { companyInfo } from "../data/company";
+import { products } from "../data/products";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("all");
@@ -45,103 +46,35 @@ export default function Home() {
     "Hello GreenTech Solutions! I would like to request a quotation for your industrial products."
   );
 
-  const featuredProducts = [
-    {
-      id: "top-discharge-air-cooler",
-      category: "coolers",
-      categoryName: "Industrial Air Cooler",
-      badge: "Bestseller",
-      name: "Top Discharge Industrial Air Cooler",
-      model: "GTS 1.1 kW – 4.5 kW Series",
-      desc: "Upward ceiling duct distribution designed for factory floor cooling without floor space loss.",
-      specs: ["Airflow: Up to 25,000 CFM", "3 Phase 380/415V Heavy Axial Fan"],
-      image: "/images/coolers/top-discharge-cooler.jpg",
-      link: "/products/top-discharge-air-cooler",
-    },
-    {
-      id: "down-discharge-air-cooler",
-      category: "coolers",
-      categoryName: "Industrial Air Cooler",
-      badge: "Shopfloor Choice",
-      name: "Down Position Industrial Air Cooler",
-      model: "GTS 0.75 kW – 3.0 kW Series",
-      desc: "Downward air delivery engineered for worker-zone cooling in injection moulding and assembly lines.",
-      specs: ["Airflow: 8,000 – 18,000 CFM", "Coverage: 800–2,500 Sq Ft"],
-      image: "/images/coolers/down-discharge-cooler.jpg",
-      link: "/products/down-discharge-air-cooler",
-    },
-    {
-      id: "ss-heavy-duty-air-cooler",
-      category: "coolers",
-      categoryName: "Industrial Air Cooler",
-      badge: "Extreme Duty",
-      name: "Heavy Duty Stainless Steel Cooler",
-      model: "GTS SS-304 Extreme Series",
-      desc: "Grade 304 stainless steel body with corner reinforcement built for harsh chemical & high-heat plants.",
-      specs: ["Body: SS 304 Stainless Sheet", "Pure Copper Winding Motor"],
-      image: "/images/coolers/stainless-steel-cooler.jpg",
-      link: "/products/ss-heavy-duty-air-cooler",
-    },
-    {
-      id: "industrial-ductable-air-cooler",
-      category: "coolers",
-      categoryName: "Industrial Air Cooler",
-      badge: "Energy Saver",
-      name: "Industrial Ductable Air Cooler",
-      model: "GTS Multi-Zone Series",
-      desc: "Multi-zone air distribution through central ducts for large manufacturing bays and warehouses.",
-      specs: ["Multi-Zone Air Delivery", "Up to 80% Power Saving"],
-      image: "/images/coolers/ductable-air-cooler.jpg",
-      link: "/products/industrial-ductable-air-cooler",
-    },
-    {
-      id: "direct-drive-exhaust-fan",
-      category: "fans",
-      categoryName: "Industrial Exhaust Fan",
-      badge: "Zero Maintenance",
-      name: "Direct Drive Industrial Exhaust Fan",
-      model: "GTS-800 to GTS-1530 Direct",
-      desc: "Galvanized steel casing with direct motor drive, eliminating belt slippage and maintenance.",
-      specs: ["Airflow: 8,000 – 18,000 CFM", "Speed: 1400 RPM Direct Drive"],
-      image: "/images/exhaust-fans/direct-drive-fan.jpg",
-      link: "/products/direct-drive-exhaust-fan",
-    },
-    {
-      id: "fibercone-exhaust-fan",
-      category: "fans",
-      categoryName: "Industrial Exhaust Fan",
-      badge: "High CFM",
-      name: "Industrial Fibercone Exhaust Fan",
-      model: "GTS-560 to GTS-1460 Cone",
-      desc: "Aerodynamic molded fiberglass discharge cone for maximum exhaust velocity and corrosion immunity.",
-      specs: ['Diameter: 15" to 50"', "Airflow: 6,000 – 44,000 CFM"],
-      image: "/images/exhaust-fans/fibercone-fan.jpg",
-      link: "/products/fibercone-exhaust-fan",
-    },
-    {
-      id: "high-bay-ufo-led",
-      category: "lights",
-      categoryName: "Industrial Lighting",
-      badge: "IP65 Waterproof",
-      name: "Commercial High Bay UFO LED Light",
-      model: "GTS-HB Series (50W – 250W)",
-      desc: "Commercial high-efficacy high-bay lighting engineered for 8m to 15m high factory ceilings.",
-      specs: ["140+ Lumens/Watt Efficacy", "Die-Cast Aluminum IP65 Casing"],
-      image: "/images/industrial-lights/category-lights.jpg",
-      link: "/products?category=industrial-lights",
-    },
-    {
-      id: "storage-racks-furniture",
-      category: "furniture",
-      categoryName: "Factory & Storage",
-      badge: "Prime Steel",
-      name: "Heavy Duty Factory Storage Almirah",
-      model: "GTS Workstation & Storage Line",
-      desc: "Heavy-gauge CRCA prime steel storage cabinets, cutting tables, and trolleys for garment factories.",
-      specs: ["CRCA Prime Steel Sheet", "Epoxy Powder Coated Finish"],
-      image: "/images/furniture/steel-almirah.jpg",
-      link: "/products?category=furniture-storage",
-    },
+  const featuredProducts = products.map((p) => {
+    let catKey = "furniture";
+    if (p.category === "air-coolers") catKey = "coolers";
+    else if (p.category === "exhaust-fans") catKey = "fans";
+    else if (p.category === "industrial-lights") catKey = "lights";
+
+    const s1 = p.features && p.features.length > 0 ? p.features[0] : "Industrial Heavy Duty";
+    const s2 = p.features && p.features.length > 1 ? p.features[1] : "Direct Factory Supply";
+
+    return {
+      id: p.id,
+      category: catKey,
+      categoryName: p.categoryName,
+      badge: p.badge || "Industrial Grade",
+      name: p.name,
+      model: s1,
+      desc: p.shortDescription || p.description,
+      specs: [s1, s2],
+      image: p.image,
+      link: `/products/${p.id}`,
+    };
+  });
+
+  const featuredTabs = [
+    { id: "all", label: "All Items", count: featuredProducts.length },
+    { id: "coolers", label: "Air Coolers", count: featuredProducts.filter((p) => p.category === "coolers").length },
+    { id: "fans", label: "Exhaust Fans", count: featuredProducts.filter((p) => p.category === "fans").length },
+    { id: "lights", label: "Lighting", count: featuredProducts.filter((p) => p.category === "lights").length },
+    { id: "furniture", label: "Furniture", count: featuredProducts.filter((p) => p.category === "furniture").length },
   ];
 
   const filteredProducts =
@@ -176,7 +109,8 @@ export default function Home() {
         <div className="container-custom px-4">
 
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#009B4D]/10 border border-[#009B4D]/25 px-3.5 py-1 text-xs font-black text-[#009B4D] uppercase tracking-widest mb-3">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#009B4D]/10 border border-[#009B4D]/25 px-3.5 py-1 text-xs
+             font-black text-[#009B4D] uppercase tracking-widest mb-3">
               <span className="w-1.5 h-1.5 rounded-full bg-[#009B4D] animate-pulse" />
               <span>Engineered For Indian Industry</span>
             </div>
@@ -411,30 +345,22 @@ export default function Home() {
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-2 mt-8">
-              {[
-                { id: "all", label: "All Items", count: featuredProducts.length },
-                { id: "coolers", label: "Air Coolers", count: 4 },
-                { id: "fans", label: "Exhaust Fans", count: 2 },
-                { id: "lights", label: "Lighting", count: 1 },
-                { id: "furniture", label: "Furniture", count: 1 },
-              ].map((tab) => (
+              {featuredTabs.map((tab) => (
                 <button
                   key={tab.id}
                   type="button"
                   onClick={() => setActiveTab(tab.id)}
-                  className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
-                    activeTab === tab.id
+                  className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all border ${activeTab === tab.id
                       ? "bg-[#009B4D] border-[#009B4D] text-white shadow-sm"
                       : "bg-slate-50 border-slate-200 text-slate-700 hover:bg-emerald-50 hover:border-emerald-300"
-                  }`}
+                    }`}
                 >
                   <span>{tab.label}</span>
                   <span
-                    className={`rounded-full px-2 py-0.2 text-[10px] font-extrabold ${
-                      activeTab === tab.id
+                    className={`rounded-full px-2 py-0.2 text-[10px] font-extrabold ${activeTab === tab.id
                         ? "bg-white/20 text-white"
                         : "bg-slate-200 text-slate-600"
-                    }`}
+                      }`}
                   >
                     {tab.count}
                   </span>
@@ -674,7 +600,7 @@ export default function Home() {
               <div>
                 <div className="h-44 overflow-hidden relative">
                   <img
-                    src="/images/factory/about-factory.jpg"
+                    src="/images/industries/industry-garment-textile.jpg"
                     alt="Garment & Textile Manufacturing"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -706,7 +632,7 @@ export default function Home() {
               <div>
                 <div className="h-44 overflow-hidden relative">
                   <img
-                    src="/images/factory/strengths-industrial.jpg"
+                    src="/images/industries/industry-heavy-manufacturing.jpg"
                     alt="Heavy Manufacturing & Engineering"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -738,7 +664,7 @@ export default function Home() {
               <div>
                 <div className="h-44 overflow-hidden relative">
                   <img
-                    src="/images/factory/hero-industrial-cooler.jpg"
+                    src="/images/industries/industry-warehouse-logistics.jpg"
                     alt="Warehousing & Logistics"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
